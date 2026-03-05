@@ -1,0 +1,992 @@
+{
+  "settings": {
+    "name": "Site-03-04_1431",
+    "currentPage": "index.html",
+    "theme": {
+      "name": "restaurantm4",
+      "title": "RestaurantM4",
+      "styling": {
+        "primaryColor": "#ffffff",
+        "secondaryColor": "#F5AEB5",
+        "successColor": "#98E38D",
+        "infoColor": "#69B9D0",
+        "warningColor": "#C1C1C1",
+        "dangerColor": "#444444",
+        "mainFont": "Josefin Sans",
+        "display1Font": "Josefin Sans",
+        "display1Size": 3,
+        "display2Font": "Josefin Sans",
+        "display2Size": 2.25,
+        "display5Font": "Cormorant Upright",
+        "display5Size": 1.8,
+        "display7Font": "Cormorant Upright",
+        "display7Size": 1.3,
+        "display4Font": "Cormorant Upright",
+        "display4Size": 1.2,
+        "isRoundedButtons": false,
+        "isAnimatedOnScroll": false,
+        "isScrollToTopButton": false,
+        "arrowColor": "#ffbc00"
+      },
+      "additionalSetColors": [
+        "#2596be",
+        "#062440",
+        "#d83c47"
+      ]
+    },
+    "path": "@PROJECT_PATH@",
+    "versionFirst": "5.3.9",
+    "siteFonts": [
+      {
+        "css": "'Josefin Sans', sans-serif",
+        "name": "Josefin Sans",
+        "url": "https://fonts.googleapis.com/css?family=Josefin+Sans:100,200,300,400,500,600,700,100i,200i,300i,400i,500i,600i,700i"
+      },
+      {
+        "css": "'Cormorant Upright', serif",
+        "name": "Cormorant Upright",
+        "url": "https://fonts.googleapis.com/css?family=Cormorant+Upright:300,400,500,600,700"
+      }
+    ],
+    "imageResize": true,
+    "uniqCompNum": 25,
+    "versionPublish": "5.3.9",
+    "screenshot": "screenshot.png"
+  },
+  "pages": {
+    "index.html": {
+      "settings": {
+        "main": true,
+        "title": "Home",
+        "meta_descr": "",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": ""
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            ".nav-item:focus, .nav-link:focus": {
+              "outline": "none"
+            },
+            ".dropdown .dropdown-menu .dropdown-item": {
+              "width": "auto",
+              "-webkit-transition": "all 0.25s ease-in-out",
+              "-moz-transition": "all 0.25s ease-in-out",
+              "transition": "all 0.25s ease-in-out",
+              "&::after": {
+                "right": "0.5rem"
+              },
+              ".mbr-iconfont": {
+                "margin-left": "-1.8rem",
+                "padding-right": "1rem",
+                "font-size": "inherit",
+                "&:before": {
+                  "display": "inline-block",
+                  "-webkit-transform": "scale(1, 1)",
+                  "transform": "scale(1, 1)",
+                  "-webkit-transition": "all 0.25s ease-in-out",
+                  "-moz-transition": "all 0.25s ease-in-out",
+                  "transition": "all 0.25s ease-in-out"
+                }
+              }
+            },
+            ".collapsed": {
+              "flex-direction": "row!important",
+              ".dropdown .dropdown-menu .dropdown-item": {
+                "padding": "0.235em 1.5em !important",
+                "transition": "none",
+                "margin": "0 !important"
+              }
+            },
+            ".navbar": {
+              "min-height": "77px",
+              "transition": "all 0.3s",
+              "background": "@menuBgColor",
+              "& when (@transparent)": {
+                "background": "none"
+              },
+              "&.opened": {
+                "transition": "all 0.3s",
+                "background": "@menuBgColor !important"
+              },
+              ".dropdown-item": {
+                "padding": "0.235rem 1.5rem"
+              },
+              ".navbar-collapse": {
+                "-webkit-justify-content": "flex-end",
+                "justify-content": "flex-end",
+                "z-index": "1",
+                "& when not (@showItems)": {
+                  "display": "none !important"
+                }
+              },
+              "&.collapsed": {
+                "&.opened": {
+                  ".dropdown-menu": {
+                    "top": "0"
+                  },
+                  "@media (min-width: 992px)": {
+                    "&:not(.navbar-short) .navbar-collapse when (@showLogo)": {
+                      "max-height": "~'calc(100vh - @{logoSize}rem - 1rem)'"
+                    }
+                  }
+                },
+                ".dropdown-menu": {
+                  "background": "transparent !important",
+                  ".dropdown-submenu": {
+                    "left": "0 !important"
+                  },
+                  ".dropdown-item:after": {
+                    "right": "auto"
+                  },
+                  ".dropdown-toggle[data-toggle='dropdown-submenu']:after": {
+                    "margin-left": "0.25rem",
+                    "border-top": "0.35em solid",
+                    "border-right": "0.35em solid transparent",
+                    "border-left": "0.35em solid transparent",
+                    "border-bottom": "0",
+                    "top": "55%"
+                  }
+                },
+                "ul.navbar-nav": {
+                  "li": {
+                    "margin": "auto"
+                  }
+                },
+                ".dropdown-menu .dropdown-item": {
+                  "padding": "0.25rem 1.5rem",
+                  "text-align": "center"
+                },
+                ".icons-menu": {
+                  "padding-left": "0",
+                  "padding-top": "0.5rem",
+                  "padding-bottom": "0.5rem"
+                }
+              },
+              "@media (max-width: 991px)": {
+                "&.opened": {
+                  ".dropdown-menu": {
+                    "top": "0"
+                  }
+                },
+                ".dropdown-menu": {
+                  "background": "transparent !important",
+                  ".dropdown-submenu": {
+                    "left": "0 !important"
+                  },
+                  ".dropdown-item:after": {
+                    "right": "auto"
+                  },
+                  ".dropdown-toggle[data-toggle='dropdown-submenu']:after": {
+                    "margin-left": "0.25rem",
+                    "border-top": "0.35em solid",
+                    "border-right": "0.35em solid transparent",
+                    "border-left": "0.35em solid transparent",
+                    "border-bottom": "0",
+                    "top": "55%"
+                  }
+                },
+                ".navbar-logo": {
+                  "img": {
+                    "height": "3.8rem !important"
+                  }
+                },
+                "ul.navbar-nav": {
+                  "li": {
+                    "margin": "auto"
+                  }
+                },
+                ".dropdown-menu .dropdown-item": {
+                  "padding": "0.25rem 1.5rem !important",
+                  "text-align": "center"
+                },
+                ".navbar-brand": {
+                  "-webkit-flex-shrink": "initial",
+                  "flex-shrink": "initial",
+                  "-webkit-flex-basis": "auto",
+                  "flex-basis": "auto",
+                  "word-break": "break-word"
+                },
+                ".navbar-toggler": {
+                  "-webkit-flex-basis": "auto",
+                  "flex-basis": "auto"
+                },
+                ".icons-menu": {
+                  "padding-left": "0",
+                  "padding-top": "0.5rem",
+                  "padding-bottom": "0.5rem"
+                }
+              },
+              "&.navbar-short": {
+                "background": "@menuBgColor !important",
+                "min-height": "60px",
+                ".navbar-logo": {
+                  "img": {
+                    "height": "3rem !important"
+                  }
+                },
+                ".navbar-brand": {
+                  "padding": "0"
+                }
+              }
+            },
+            ".navbar-brand": {
+              "-webkit-flex-shrink": "0",
+              "flex-shrink": "0",
+              "-webkit-align-items": "center",
+              "align-items": "center",
+              "margin-right": "0",
+              "padding": "0",
+              "transition": "all 0.3s",
+              "word-break": "break-word",
+              "z-index": "1",
+              ".navbar-caption": {
+                "line-height": "inherit !important"
+              },
+              ".navbar-logo a": {
+                "outline": "none"
+              }
+            },
+            ".dropdown-item.active, .dropdown-item:active": {
+              "background-color": "transparent"
+            },
+            ".navbar-expand-lg .navbar-nav .nav-link": {
+              "padding": "0"
+            },
+            ".nav-dropdown .link.dropdown-toggle": {
+              "margin-right": "1.667em",
+              "&[aria-expanded='true']": {
+                "margin-right": "0",
+                "padding": "0.667em 1.667em"
+              }
+            },
+            ".navbar.navbar-expand-lg .dropdown": {
+              ".dropdown-menu": {
+                "background": "@menuBgColor",
+                ".dropdown-submenu": {
+                  "margin": "0",
+                  "left": "100%"
+                }
+              }
+            },
+            ".navbar .dropdown.open > .dropdown-menu": {
+              "display": "block"
+            },
+            "ul.navbar-nav": {
+              "-webkit-flex-wrap": "wrap",
+              "flex-wrap": "wrap"
+            },
+            ".navbar-buttons": {
+              "text-align": "center"
+            },
+            "button.navbar-toggler": {
+              "outline": "none",
+              "width": "31px",
+              "height": "20px",
+              "cursor": "pointer",
+              "transition": "all 0.2s",
+              "position": "relative",
+              "-webkit-align-self": "center",
+              "align-self": "center",
+              ".hamburger span": {
+                "position": "absolute",
+                "right": "0",
+                "width": "30px",
+                "height": "2px",
+                "border-right": "5px",
+                "background-color": "@hamburgerColor",
+                "&:nth-child(1)": {
+                  "top": "0",
+                  "transition": "all 0.2s"
+                },
+                "&:nth-child(2)": {
+                  "top": "8px",
+                  "transition": "all 0.15s"
+                },
+                "&:nth-child(3)": {
+                  "top": "8px",
+                  "transition": "all 0.15s"
+                },
+                "&:nth-child(4)": {
+                  "top": "16px",
+                  "transition": "all 0.2s"
+                }
+              }
+            },
+            "nav.opened .hamburger span": {
+              "&:nth-child(1)": {
+                "top": "8px",
+                "width": "0",
+                "opacity": "0",
+                "right": "50%",
+                "transition": "all 0.2s"
+              },
+              "&:nth-child(2)": {
+                "-webkit-transform": "rotate(45deg)",
+                "transform": "rotate(45deg)",
+                "transition": "all 0.25s"
+              },
+              "&:nth-child(3)": {
+                "-webkit-transform": "rotate(-45deg)",
+                "transform": "rotate(-45deg)",
+                "transition": "all 0.25s"
+              },
+              "&:nth-child(4)": {
+                "top": "8px",
+                "width": "0",
+                "opacity": "0",
+                "right": "50%",
+                "transition": "all 0.2s"
+              }
+            },
+            ".navbar-dropdown": {
+              "padding": "0.5rem 1rem",
+              "& when (@sticky)": {
+                "position": "fixed"
+              }
+            },
+            "a.nav-link": {
+              "-webkit-justify-content": "center",
+              "justify-content": "center",
+              "display": "flex",
+              "-webkit-align-items": "center",
+              "align-items": "center"
+            },
+            ".mbr-iconfont": {
+              "font-size": "1.5rem",
+              "padding-right": "0.5rem"
+            },
+            ".icons-menu": {
+              "-webkit-flex-wrap": "wrap",
+              "flex-wrap": "wrap",
+              "display": "flex",
+              "-webkit-justify-content": "center",
+              "justify-content": "center",
+              "padding-left": "1rem",
+              "text-align": "center",
+              "span": {
+                "font-size": "20px",
+                "color": "#232323"
+              }
+            },
+            ".nav-link:hover, .dropdown-item:hover, .icons-menu .mbr-iconfont:hover": {
+              "color": "@itemsHoverColor !important"
+            },
+            "@media screen and (~'-ms-high-contrast: active'), (~'-ms-high-contrast: none')": {
+              ".navbar": {
+                "height": "77px",
+                "&.opened": {
+                  "height": "auto"
+                }
+              }
+            }
+          },
+          "_name": "menu3",
+          "_sourceTheme": "restaurantm4",
+          "_customHTML": "<section class=\"menu menu3 restaurantm4_menu3\" group=\"Menu\" plugins=\"DropDown, TouchSwipe\" always-top global once=\"menu\" not-draggable position-absolute>\n\n\t<mbr-parameters>\n\t\t<!-- Block parameters controls (Blue \"Gear\" panel) -->\n\t\t<header condition=\"showLogo || showIcons\">Size</header>\n\t\t<input type=\"range\" title=\"Logo Size\" inline name=\"logoSize\" min=\"3.8\" max=\"8\" step=\"0.1\" value=\"4.7\" condition=\"showLogo\">\n\t\t<select title=\"Icons\" name=\"iconsAmount\" condition=\"showIcons && showItems\">\n\t\t\t<option value=\"1\">1</option>\n\t\t\t<option value=\"2\">2</option>\n\t\t\t<option value=\"3\">3</option>\n\t\t\t<option value=\"4\" selected>4</option>\n\t\t\t<option value=\"5\">5</option>\n\t\t\t<option value=\"6\">6</option>\n\t\t</select>\n\t\t<header>Show / Hide</header>\n\t\t<input type=\"checkbox\" title=\"Logo\" name=\"showLogo\" checked>\n\t\t<input type=\"checkbox\" title=\"Brand Name\" name=\"showBrand\" checked>\n\t\t<input type=\"checkbox\" title=\"Menu Items\" name=\"showItems\" checked>\n\t\t<input type=\"color\" title=\"Items Hover Color\" name=\"itemsHoverColor\" value=\"#cccccc\" condition=\"showItems\">\n\t\t<input type=\"checkbox\" title=\"Icons\" name=\"showIcons\" condition=\"showItems\">\n\t\t<input type=\"checkbox\" title=\"Button(s)\" name=\"showButtons\" checked condition=\"showItems\">\n\t\t<input type=\"checkbox\" title=\"Sticky\" name=\"sticky\" checked>\n\t\t<input type=\"checkbox\" title=\"Collapsed\" name=\"collapsed\">\n\t\t<input type=\"checkbox\" title=\"Transparent\" name=\"transparent\">\n\t\t<input type=\"color\" title=\"Hamburger Color\" name=\"hamburgerColor\" value=\"#ffffff\">\n\t\t<input type=\"color\" title=\"Background Color\" name=\"menuBgColor\" value=\"#062440\">\n\t\t<!-- End block parameters -->\n\t</mbr-parameters>\n\n\t<nav class=\"navbar navbar-dropdown\" mbr-class=\"{'navbar-fixed-top':sticky, 'navbar-expand-lg':!collapsed, 'collapsed':collapsed}\">\n\t\t<div class=\"navbar-brand\">\n\t\t\t<span mbr-if=\"showLogo\" class=\"navbar-logo\">\n\t\t\t\t<a href=\"index.html\">\n\t\t\t\t\t<img src=\"@PROJECT_PATH@/assets/images/penalty-box-sports-bar-logo-224x125.jpg\" alt=\"Mobirise\" mbr-style=\"{'height': logoSize + 'rem'}\">\n\t\t\t\t</a>\n\t\t\t</span>\n\t\t\t<span mbr-if=\"showBrand\" mbr-buttons mbr-theme-style=\"display-2\" class=\"navbar-caption-wrap\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd,-mbrBtnRemove\"><a class=\"navbar-caption text-white text-primary\" data-app-selector=\".navbar-caption\" href=\"index.html\" data-app-placeholder=\"Type Text\">Penalty Box Bar</a></span>\n\t\t</div>\n\t\t<button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarNavAltMarkup\" aria-expanded=\"false\" aria-label=\"Toggle navigation\" mbr-if=\"showItems\">\n\t\t\t<div class=\"hamburger\">\n\t\t\t\t<span></span>\n\t\t\t\t<span></span>\n\t\t\t\t<span></span>\n\t\t\t\t<span></span>\n\t\t\t</div>\n\t\t</button>\n\t\t<div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n\t\t\t<ul mbr-menu class=\"navbar-nav nav-dropdown\" mbr-theme-style=\"display-4\" mbr-class=\"{'nav-right': !showButtons,'navbar-nav-top-padding': isPublish && !showBrand && !showLogo}\"><li class=\"nav-item\">\n\t\t\t\t\t<a class=\"nav-link link text-white text-primary\" href=\"index.html#gallery2-5\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">Drinks</a>\n\t\t\t\t</li><li class=\"nav-item\"><a class=\"nav-link link text-white text-primary\" href=\"index.html#tabs1-0\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">Grub</a></li>\n\t\t\t\t<li class=\"nav-item\">\n\t\t\t\t\t<a class=\"nav-link link text-white text-primary\" href=\"index.html#image4-o\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">About</a>\n\t\t\t\t</li></ul>\n\t\t\t<div class=\"icons-menu\" mbr-if=\"showIcons\">\n\t\t\t\t<a href=\"https://mobiri.se\" target=\"_blank\">\n\t\t\t\t\t<span mbr-icon class=\"p-2 mbr-iconfont socicon-twitter socicon\"></span>\n\t\t\t\t</a>\n\t\t\t\t<a href=\"https://mobiri.se\" target=\"_blank\" mbr-if=\"iconsAmount > 1\">\n\t\t\t\t\t<span mbr-icon class=\"p-2 mbr-iconfont socicon-facebook socicon\"></span>\n\t\t\t\t</a>\n\t\t\t\t<a href=\"https://mobiri.se\" target=\"_blank\" mbr-if=\"iconsAmount > 2\">\n\t\t\t\t\t<span mbr-icon class=\"p-2 mbr-iconfont socicon-youtube socicon\"></span>\n\t\t\t\t</a>\n\t\t\t\t<a href=\"https://mobiri.se\" target=\"_blank\" mbr-if=\"iconsAmount > 3\">\n\t\t\t\t\t<span mbr-icon class=\"p-2 mbr-iconfont socicon-behance socicon\"></span>\n\t\t\t\t</a>\n\t\t\t\t<a href=\"https://mobiri.se\" target=\"_blank\" mbr-if=\"iconsAmount > 4\">\n\t\t\t\t\t<span mbr-icon class=\"p-2 mbr-iconfont socicon-googleplus socicon\"></span>\n\t\t\t\t</a>\n\t\t\t\t<a href=\"https://mobiri.se\" target=\"_blank\" mbr-if=\"iconsAmount > 5\">\n\t\t\t\t\t<span mbr-icon class=\"p-2 mbr-iconfont socicon-linkedin socicon\"></span>\n\t\t\t\t</a>\n\t\t\t</div>\n\t\t\t<div mbr-if=\"showButtons\" mbr-buttons mbr-theme-style=\"display-4\" class=\"navbar-buttons mbr-section-btn\"><a class=\"btn btn-sm btn-white\" href=\"tel:+1-757-222-2222\" data-app-placeholder=\"Type Text\">Contact</a></div>\n\t\t</div>\n\t</nav>\n</section>",
+          "_cid": "vcW1N3GGBd",
+          "_anchor": "menu3-3",
+          "_protectedParams": [],
+          "_global": true,
+          "_once": "menu",
+          "_params": {}
+        },
+        {
+          "_name": "header6",
+          "_customHTML": "<section class=\"header6\" group=\"Headers\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <header>Size</header>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"3\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n        <input type=\"checkbox\" title=\"Revers\" name=\"reverse\">\n        <input type=\"range\" name=\"textWidth\" title=\"Width\" min=\"4\" max=\"9\" value=\"4\" step=\"1\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Topic\" name=\"showSubtitle\">\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\">\n        <header>Background</header>\n        <input type=\"color\" title=\"Color\" value=\"#062440\" name=\"bgColor\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n    \n    <div class>\n        <div class=\"row align-items-center\" mbr-class=\"{'flex-row-reverse' : reverse}\">\n            <div class=\"col-12 col-lg\">\n                <div class=\"mbr-figure\">\n                    <div class=\"image\">\n                        <img src=\"@PROJECT_PATH@/assets/images/sports-bar-with-hockey-basketball-baseball-and-football-on-tvs.-highlight-beer-on-tap-and-wings-1600x896.jpg\" alt title>\n                    </div>\n                </div>\n            </div>\n            <div class=\"col-12 col-lg-{{textWidth}}\">\n                <div class=\"content_block\">\n                    <div class=\"card_topic\" mbr-if=\"showSubtitle\">\n                        <span mbr-text class=\"category_content mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".category_content, .card_topic\">The Penalty Box: Your Game-Day Sanctuary.</span>\n                        <span mbr-icon class=\"mbr-iconfont mobi-mbri-clock mobi-mbri\"></span>\n                        <span mbr-text class=\"category_estimate mbr-medium mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".category_estimate, .card_topic\"></span>\n                    </div>\n                    <h1 class=\"mbr-section-title mbr-fonts-style\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\"><b>The Penalty Box: Your Game-Day Sanctuary.</b></h1>\n                    <p class=\"mbr-text mbr-fonts-style mt-3\" mbr-theme-style=\"display-4\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">Wall-to-wall screens ensure you never miss a cross-check or a buzzer-beater.&nbsp;Whether you’re serving two minutes for unsportsmanlike conduct or just hiding out from the real world, we’ve got a stool waiting with your name on it.<br></p>\n                    <div class=\"mbr-section-btn\" mbr-if=\"showButtons\" mbr-buttons mbr-theme-style=\"display-4\"><a class=\"btn btn-secondary-outline\" href=\"#\" data-app-placeholder=\"Type Text\">Read More&nbsp;<span class=\"mobi-mbri mobi-mbri-right mbr-iconfont mbr-iconfont-btn\"></span></a></div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "background-color": "@bgColor",
+            ".content_block": {
+              "padding": "60px 15px",
+              "padding-right": "20%",
+              "&:hover": {
+                ".mbr-section-title a": {
+                  "color": "@secondaryColor !important"
+                }
+              },
+              "& when (@reverse)": {
+                "padding-left": "20%",
+                "padding-right": "15px"
+              }
+            },
+            ".card_topic, .mbr-section-subtitle": {
+              "margin-bottom": "12px"
+            },
+            ".card_topic .mbr-iconfont": {
+              "font-size": "1rem",
+              "color": "@secondaryColor",
+              "margin-left": "10px",
+              "margin-right": "3px"
+            },
+            ".image": {
+              "position": "relative",
+              "&:before": {
+                "content": "\"\"",
+                "position": "absolute",
+                "width": "60%",
+                "height": "100%",
+                "right": "-1px",
+                "background-image": "linear-gradient(to right, fade(#ffffff, 0), fade(@bgColor, 100))",
+                "z-index": "1",
+                "pointer-events": "none",
+                "& when (@reverse)": {
+                  "left": "0",
+                  "background-image": "linear-gradient(to left, fade(#ffffff, 0), fade(@bgColor, 100))"
+                }
+              },
+              "img": {
+                "width": "100%",
+                "height": "100%",
+                "object-fit": "cover"
+              }
+            },
+            ".mbr-section-btn .btn-secondary-outline": {
+              "padding": "3px 0",
+              "margin-bottom": "0",
+              "border": "none !important",
+              "background-color": "transparent !important",
+              "&:hover, .active, &:focus": {
+                "color": "@primaryColor !important"
+              }
+            },
+            ".category_content": {
+              "opacity": ".8"
+            },
+            "@media (max-width: 991px)": {
+              ".content_block": {
+                "padding": "30px 15px"
+              },
+              ".mbr-figure": {
+                "padding": "0"
+              },
+              ".image": {
+                "&:before": {
+                  "width": "100%",
+                  "height": "60%",
+                  "bottom": "0",
+                  "left": "0",
+                  "background-image": "linear-gradient(to bottom, fade(#ffffff, 0), fade(@bgColor, 99))"
+                }
+              }
+            },
+            ".mbr-section-title": {
+              "color": "#ffffff"
+            },
+            ".mbr-text, .mbr-section-btn": {
+              "color": "#cccccc"
+            }
+          },
+          "_cid": "vcW2eJL6xm",
+          "_anchor": "header6-4",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)",
+              "& when (@overlay)": {
+                ".mbr-overlay": {
+                  "background": "@overlayColor",
+                  "opacity": "@overlayOpacity"
+                }
+              }
+            },
+            "img, .item-img": {
+              "width": "100%",
+              "& when (@autoSize)": {
+                "height": "100%",
+                "object-fit": "cover",
+                "& when (@showCardTitle)": {
+                  "height": "(@imageHeight * 100px)",
+                  "object-fit": "cover"
+                }
+              }
+            },
+            ".item:focus, span:focus": {
+              "outline": "none"
+            },
+            ".item": {
+              "cursor": "pointer",
+              "margin-bottom": "2rem"
+            },
+            "& when not (@spacing)": {
+              ".row": {
+                "margin-left": "0",
+                "margin-right": "0"
+              },
+              ".item": {
+                "padding": "0",
+                "margin": "0"
+              }
+            },
+            ".item-wrapper": {
+              "position": "relative",
+              "border-radius": "10px",
+              "background": "@cardsBg",
+              "height": "100%",
+              "display": "flex",
+              "flex-flow": "column nowrap"
+            },
+            ".mbr-section-btn": {
+              "margin-top": "auto !important"
+            },
+            ".mbr-section-title": {
+              "color": "#ffffff",
+              "padding-bottom": "50px",
+              "text-align": "center"
+            },
+            ".item-title": {
+              "margin": "20px",
+              "color": "#ffffff"
+            }
+          },
+          "_name": "gallery2",
+          "_customHTML": "<section class=\"gallery2\" group=\"Sliders & Galleries\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"1\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"2\">\n        <select title=\"Columns\" name=\"cardsWidth\">\n            <option value=\"12\">1</option>\n            <option value=\"6\">2</option>\n            <option value=\"4\" selected>3</option>\n            <option value=\"3\">4</option>\n        </select>\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" name=\"showTitle\" title=\"Title\" checked>\n        <header>Cards</header>\n        <input type=\"checkbox\" name=\"autoSize\" title=\"Auto Size\" checked>\n        <input type=\"range\" name=\"imageHeight\" title=\"Height\" min=\"1\" max=\"5\" step=\"1\" value=\"3\">\n        <input type=\"checkbox\" title=\"Spacing\" name=\"spacing\" checked>\n        <input type=\"checkbox\" name=\"showCardTitle\" title=\"Title\" checked>\n        <input type=\"color\" name=\"cardsBg\" title=\"BG\" value=\"#d83c47\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" required>\n            <input type=\"image\" title=\"Image\" value=\"@ADDONS_PATH@/skillm4/components/_images/background1.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#062440\" selected>\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type == 'image'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type == 'image'\">\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\"></div>\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"mbr-section-head\" mbr-if=\"showTitle || showSubtitle\">\n            <h4 class=\"mbr-section-title mbr-fonts-style align-left mb-0\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">\n                <b>Signature Sports Cocktails</b></h4>\n        </div>\n        <div class=\"row\">\n            <div class=\"item features-image col-12 col-md-6 col-lg-{{cardsWidth}}\">\n                <div class=\"item-wrapper\">\n                    <div class=\"item-img\">\n                        <img src=\"@PROJECT_PATH@/assets/images/hockey-themed-cocktail-700x392.jpg\" alt>\n                    </div>\n                    <div class=\"item-content\" mbr-if=\"showCardTitle || showCardSubtitle || showText || showButtons\">\n                        <h5 class=\"item-title mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".item-title\" mbr-if=\"showCardTitle\">\n                            Puck Drop Punch (Hockey)<br><br>A refreshing power-play of vodka, blue curaçao, and grenadine layered with lemon-lime soda and dark cherry \"puck\" ice cubes.&nbsp;</h5>\n                    </div>\n                </div>\n            </div>\n            <div class=\"item features-image col-12 col-md-6 col-lg-{{cardsWidth}}\">\n                <div class=\"item-wrapper\">\n                    <div class=\"item-img\">\n                        <img src=\"@PROJECT_PATH@/assets/images/remove-fries-700x378.jpg\" alt>\n                    </div>\n                    <div class=\"item-content\" mbr-if=\"showCardTitle || showCardSubtitle || showText || showButtons\">\n                        <h5 class=\"item-title mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".item-title\" mbr-if=\"showCardTitle\">\n                            The Linebacker (Football)<br><br>A hard-hitting blend of high-proof bourbon, sweet vermouth, walnut bitters, and a smoke-infused maple syrup.</h5> \n                    </div>\n                </div>\n            </div>\n            <div class=\"item features-image col-12 col-md-6 col-lg-{{cardsWidth}}\">\n                <div class=\"item-wrapper\">\n                    <div class=\"item-img\">\n                        <img src=\"@PROJECT_PATH@/assets/images/remove-baseball-700x378.jpg\" alt>\n                    </div>\n                    <div class=\"item-content\" mbr-if=\"showCardTitle || showCardSubtitle || showText || showButtons\">\n                        <h5 class=\"item-title mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".item-title\" mbr-if=\"showCardTitle\">\n                            The Chalk Line (Baseball)<br><br>A smooth, heavy-hitting blend of aged bourbon, whole milk, heavy cream, and a sneaky \"stolen\" splash of coffee liqueur</h5>\n                    </div>\n                </div>\n            </div>\n            <div class=\"item features-image col-12 col-md-6 col-lg-{{cardsWidth}}\">\n                <div class=\"item-wrapper\">\n                    <div class=\"item-img\">\n                        <img src=\"@PROJECT_PATH@/assets/images/soccer-cocktail-black-and-white-some-green.-background-is-soccer-field-700x392.jpg\" alt title>\n                    </div>\n                    <div class=\"item-content\" mbr-if=\"showCardTitle || showCardSubtitle || showText || showButtons\">\n                        <h5 class=\"item-title mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".item-title\" mbr-if=\"showCardTitle\">Penalty Kick Punch (Soccer)<br><br>A vibrant, grass-green blend of tequila, Midori melon liqueur, and fresh lime juice, topped with a crisp club soda fizz and garnished with a mint sprig \"sideline.\"</h5>\n                    </div>                  \n                </div>\n            </div><div class=\"item features-image col-12 col-md-6 col-lg-{{cardsWidth}}\">\n                <div class=\"item-wrapper\">\n                    <div class=\"item-img\">\n                        <img src=\"@PROJECT_PATH@/assets/images/green-golf-cocktails-700x392.jpeg\" alt title data-slide-to=\"4\">\n                    </div>\n                    <div class=\"item-content\" mbr-if=\"showCardTitle || showCardSubtitle || showText || showButtons\">\n                        <h5 class=\"item-title mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".item-title\" mbr-if=\"showCardTitle\">The Back Nine (Golf)<br><br>A vibrant, grass-green rally of tequila, sour apple liqueur, and fresh lime juice, topped with a crisp club soda fizz and a mint sprig \"flagstick.\"</h5>\n                    </div>                  \n                </div>\n            </div><div class=\"item features-image col-12 col-md-6 col-lg-{{cardsWidth}}\">\n                <div class=\"item-wrapper\">\n                    <div class=\"item-img\">\n                        <img src=\"@PROJECT_PATH@/assets/images/yellow-tennis-cocktail-with-round-lemon-and-background-is-normal-tennis-court-700x392.jpg\" alt title data-slide-to=\"5\">\n                    </div>\n                    <div class=\"item-content\" mbr-if=\"showCardTitle || showCardSubtitle || showText || showButtons\">\n                        <h5 class=\"item-title mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".item-title\" mbr-if=\"showCardTitle\">\n                            The Set Point (Tennis)<br><br>A vibrant, neon-yellow \"ace\" of white rum, limoncello, and fresh lemon juice, topped with a splash of lemon-lime soda.</h5>\n                    </div>                  \n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "vcW4774eKU",
+          "_anchor": "gallery2-5",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_name": "content04",
+          "_customHTML": "<section group=\"Headers\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{\n    'mbr-fullscreen': fullScreen,\n    'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n        \n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"15\" step=\"1\" value=\"0\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"15\" step=\"1\" value=\"4\" condition=\"fullScreen == false\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"range\" inline title=\"Col 1 Items\" name=\"menuItems1\" min=\"1\" max=\"10\" step=\"1\" value=\"5\">\n        <input type=\"range\" inline title=\"Col 2 Items\" name=\"menuItems2\" min=\"1\" max=\"10\" step=\"1\" value=\"5\">\n        <input type=\"range\" inline title=\"Col 3 Items\" name=\"menuItems3\" min=\"1\" max=\"10\" step=\"1\" value=\"5\">\n        <input type=\"range\" inline title=\"Col 4 Items\" name=\"menuItems4\" min=\"1\" max=\"10\" step=\"1\" value=\"5\">\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"@ADDONS_PATH@/techm4/components/_images/background1.jpg\" parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#062440\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n        </fieldset>\n        <header condition=\"bg.type === 'video'\">Fallback Image</header>\n        <input type=\"image\" title=\"Fallback Image\" value=\"@ADDONS_PATH@/techm4/components/_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#232323\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" condition=\"overlay && bg.type !== 'color'\">\n        \n    </mbr-parameters>\n    <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n    <div class=\"container\">\n        <div class=\"row justify-content-center\">\n            \n            \n            \n            <div class=\"col-6 col-md-3 col-lg-3 md-pb\">\n                \n                <h3 class=\"col-title1 mbr-semibold pb-3 mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".col-title1\">Lagers</h3>\n                <ul class=\"list\" mbr-list mbr-list-grow=\"menuItems1\">\n                    <li class=\"item-wrap align-left\">\n                        <span mbr-icon class=\"mbr-iconfont mobi-mbri-smile-face mobi-mbri\" style=\"color: rgb(191, 206, 255); fill: rgb(191, 206, 255);\"></span>\n                        <h4 mbr-text class=\"item1 mbr-regular mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".item1\">Pilsner</h4>\n                    </li>\n                <li class=\"item-wrap\">\n                        <span mbr-icon class=\"mbr-iconfont mobi-mbri-smile-face mobi-mbri\" style=\"color: rgb(191, 206, 255); fill: rgb(191, 206, 255);\"></span>\n                        <h4 mbr-text class=\"item1 mbr-regular mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".item1\">Bud Light</h4>\n                    </li><li class=\"item-wrap\">\n                        <span mbr-icon class=\"mbr-iconfont mobi-mbri-smile-face mobi-mbri\" style=\"color: rgb(191, 206, 255); fill: rgb(191, 206, 255);\"></span>\n                        <h4 mbr-text class=\"item1 mbr-regular mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".item1\">Miller Lite</h4>\n                    </li><li class=\"item-wrap\">\n                        <span mbr-icon class=\"mbr-iconfont mobi-mbri-smile-face mobi-mbri\" style=\"color: rgb(191, 206, 255); fill: rgb(191, 206, 255);\"></span>\n                        <h4 mbr-text class=\"item1 mbr-regular mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".item1\">Helles</h4>\n                    </li><li class=\"item-wrap\">\n                        <span mbr-icon class=\"mbr-iconfont mobi-mbri-smile-face mobi-mbri\" style=\"color: rgb(191, 206, 255); fill: rgb(191, 206, 255);\"></span>\n                        <h4 mbr-text class=\"item1 mbr-regular mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".item1\">Sam Adams</h4>\n                    </li></ul>\n         \n            </div>\n            \n             <div class=\"col-6 col-md-3 col-lg-3 md-pb\">\n                \n                <h3 class=\"col-title2 mbr-semibold pb-3 mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".col-title2\">IPAs</h3>\n                <ul class=\"list\" mbr-list mbr-list-grow=\"menuItems2\">\n                    <li class=\"item-wrap\">\n                        <span mbr-icon class=\"mbr-iconfont mobi-mbri-hearth mobi-mbri\" style=\"color: rgb(85, 128, 255); fill: rgb(85, 128, 255);\"></span>\n                        <h4 mbr-text class=\"item2 mbr-regular mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".item2\">West Coast IPA</h4>\n                    </li>\n                <li class=\"item-wrap\">\n                        <span mbr-icon class=\"mbr-iconfont mobi-mbri-hearth mobi-mbri\" style=\"color: rgb(85, 128, 255); fill: rgb(85, 128, 255);\"></span>\n                        <h4 mbr-text class=\"item2 mbr-regular mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".item2\">Lagunitas DayTime</h4>\n                    </li><li class=\"item-wrap\">\n                        <span mbr-icon class=\"mbr-iconfont mobi-mbri-hearth mobi-mbri\" style=\"color: rgb(85, 128, 255); fill: rgb(85, 128, 255);\"></span>\n                        <h4 mbr-text class=\"item2 mbr-regular mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".item2\">Founders All Day IPA&nbsp;</h4>\n                    </li><li class=\"item-wrap\">\n                        <span mbr-icon class=\"mbr-iconfont mobi-mbri-hearth mobi-mbri\" style=\"color: rgb(85, 128, 255); fill: rgb(85, 128, 255);\"></span>\n                        <h4 mbr-text class=\"item2 mbr-regular mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".item2\">Dogfish Head 90 Minute IPA&nbsp;</h4>\n                    </li><li class=\"item-wrap\">\n                        <span mbr-icon class=\"mbr-iconfont mobi-mbri-hearth mobi-mbri\" style=\"color: rgb(85, 128, 255); fill: rgb(85, 128, 255);\"></span>\n                        <h4 mbr-text class=\"item2 mbr-regular mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".item2\">Russian River Pliny the Elder</h4>\n                    </li></ul>\n         \n            </div>\n            \n            \n              <div class=\"col-6 col-md-3 col-lg-3\">\n                \n                <h3 class=\"col-title3 mbr-semibold pb-3 mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".col-title3\">Stouts &amp; Porters&nbsp;</h3>\n                <ul class=\"list\" mbr-list mbr-list-grow=\"menuItems3\">\n                    <li class=\"item-wrap\">\n                        <span mbr-icon class=\"mbr-iconfont mobi-mbri-smile-face mobi-mbri\" style=\"color: rgb(255, 138, 115); fill: rgb(255, 138, 115);\"></span>\n                        <h4 mbr-text class=\"item3 mbr-regular mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".item3\">Guinness</h4>\n                    </li>\n                <li class=\"item-wrap\">\n                        <span mbr-icon class=\"mbr-iconfont mobi-mbri-smile-face mobi-mbri\" style=\"color: rgb(255, 138, 115); fill: rgb(255, 138, 115);\"></span>\n                        <h4 mbr-text class=\"item3 mbr-regular mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".item3\">Lancaster Milk Stout</h4>\n                    </li><li class=\"item-wrap\">\n                        <span mbr-icon class=\"mbr-iconfont mobi-mbri-smile-face mobi-mbri\" style=\"color: rgb(255, 138, 115); fill: rgb(255, 138, 115);\"></span>\n                        <h4 mbr-text class=\"item3 mbr-regular mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".item3\">Anchor Porter</h4>\n                    </li><li class=\"item-wrap\">\n                        <span mbr-icon class=\"mbr-iconfont mobi-mbri-smile-face mobi-mbri\" style=\"color: rgb(255, 138, 115); fill: rgb(255, 138, 115);\"></span>\n                        <h4 mbr-text class=\"item3 mbr-regular mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".item3\">Founders Porter</h4>\n                    </li><li class=\"item-wrap\">\n                        <span mbr-icon class=\"mbr-iconfont mobi-mbri-smile-face mobi-mbri\" style=\"color: rgb(255, 138, 115); fill: rgb(255, 138, 115);\"></span>\n                        <h4 mbr-text class=\"item3 mbr-regular mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".item3\">Ten FIDY (Oskar Blues)</h4>\n                    </li></ul>\n         \n            </div>\n                \n         <div class=\"col-6 col-md-3 col-lg-3\">\n                \n                <h3 class=\"col-title4 mbr-semibold pb-3 mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".col-title4\">Wheat Beers</h3>\n                <ul class=\"list\" mbr-list mbr-list-grow=\"menuItems4\">\n                    <li class=\"item-wrap\">\n                        <span mbr-icon class=\"mbr-iconfont mobi-mbri-hearth mobi-mbri\" style=\"color: rgb(216, 60, 71); fill: rgb(216, 60, 71);\"></span>\n                        <h4 mbr-text class=\"item4 mbr-regular mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".item4\">Blue Moon</h4>\n                    </li>\n                <li class=\"item-wrap\">\n                        <span mbr-icon class=\"mbr-iconfont mobi-mbri-hearth mobi-mbri\" style=\"color: rgb(216, 60, 71); fill: rgb(216, 60, 71);\"></span>\n                        <h4 mbr-text class=\"item4 mbr-regular mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".item4\">German Hefeweizen</h4>\n                    </li><li class=\"item-wrap\">\n                        <span mbr-icon class=\"mbr-iconfont mobi-mbri-hearth mobi-mbri\" style=\"color: rgb(216, 60, 71); fill: rgb(216, 60, 71);\"></span>\n                        <h4 mbr-text class=\"item4 mbr-regular mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".item4\">Bell's Oberon</h4>\n                    </li><li class=\"item-wrap\">\n                        <span mbr-icon class=\"mbr-iconfont mobi-mbri-hearth mobi-mbri\" style=\"color: rgb(216, 60, 71); fill: rgb(216, 60, 71);\"></span>\n                        <h4 mbr-text class=\"item4 mbr-regular mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".item4\">Ayinger Urweisse</h4>\n                    </li><li class=\"item-wrap\">\n                        <span mbr-icon class=\"mbr-iconfont mobi-mbri-hearth mobi-mbri\" style=\"color: rgb(216, 60, 71); fill: rgb(216, 60, 71);\"></span>\n                        <h4 mbr-text class=\"item4 mbr-regular mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".item4\">Victory Kirsch Gose</h4>\n                    </li></ul>\n         \n            </div>\n            \n            \n            \n        </div>\n    </div>\n</section>",
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 15px)",
+              "padding-bottom": "(@paddingBottom * 15px)"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "li": {
+              "list-style": "none"
+            },
+            ".item-wrap": {
+              "display": "flex",
+              "align-items": "center",
+              "margin-bottom": "14px"
+            },
+            ".mbr-iconfont": {
+              "font-size": "16px!important",
+              "padding-right": "12px"
+            },
+            "h4": {
+              "margin": "0"
+            },
+            ".item": {
+              "color": "#57468b"
+            },
+            "ul": {
+              "padding": "0",
+              "margin": "0"
+            },
+            ".col-title": {
+              "color": "#57468b"
+            },
+            ".col-title1": {
+              "color": "#bfceff"
+            },
+            ".col-title2": {
+              "color": "#5580ff"
+            },
+            ".col-title3": {
+              "color": "#ff8a73"
+            },
+            ".col-title4": {
+              "color": "#d83c47"
+            },
+            ".item1": {
+              "color": "#efefef"
+            },
+            ".item2": {
+              "color": "#efefef"
+            },
+            ".item3": {
+              "color": "#efefef"
+            },
+            ".item4": {
+              "color": "#efefef"
+            },
+            "@media (max-width: 768px)": {
+              ".md-pb": {
+                "padding-bottom": "1rem"
+              }
+            },
+            ".mbr-fallback-image.disabled": {
+              "display": "none"
+            },
+            ".mbr-fallback-image": {
+              "display": "block",
+              "background-size": "cover",
+              "background-position": "center center",
+              "width": "100%",
+              "height": "100%",
+              "position": "absolute",
+              "top": "0",
+              "& when (@bg-type = 'video')": {
+                "background-image": "url(@fallBackImage)"
+              }
+            }
+          },
+          "_cid": "vcW6ZA6SUg",
+          "_anchor": "content04-h",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value",
+              "& when (@gradientBg)": {
+                "background": "linear-gradient(0deg, @bg-value, @color2)"
+              }
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-section-title": {
+              "letter-spacing": "0.1em",
+              "text-align": "center"
+            },
+            ".mbr-section-subtitle": {
+              "color": "#ffffff"
+            },
+            ".image-wrap": {
+              "img": {
+                "width": "100%"
+              }
+            },
+            ".mbr-desc": {
+              "width": "100%"
+            },
+            ".tab-content": {
+              "padding": "4rem 3rem 3rem 3rem",
+              "border-top": "3px solid @activeTabColor",
+              "-webkit-box-shadow": "0px 4px 26px -5px rgba(0, 0, 0, 0.2)",
+              "-moz-box-shadow": "0px 4px 26px -5px rgba(0, 0, 0, 0.2)",
+              "box-shadow": "0px 4px 26px -5px rgba(0, 0, 0, 0.2)",
+              "background": "@tabsBg"
+            },
+            ".nav": {
+              "border": "none"
+            },
+            ".nav-tabs": {
+              "-webkit-justify-content": "center",
+              "justify-content": "center",
+              "-webkit-flex-wrap": "wrap",
+              "flex-wrap": "wrap"
+            },
+            ".card-box": {
+              "-webkit-align-items": "baseline",
+              "align-items": "baseline",
+              ".mbr-price": {
+                "margin": "0"
+              },
+              ".mbr-text": {
+                "line-height": "1"
+              }
+            },
+            ".nav-tabs .nav-link": {
+              "box-sizing": "border-box",
+              "color": "@tabsColor",
+              "font-style": "normal",
+              "font-weight": "500",
+              "padding": "0.5rem 1rem",
+              "margin": "0px",
+              "margin-left": "-0.5px",
+              "margin-right": "-0.5px",
+              "margin-bottom": "1rem",
+              "transition": "all 0.5s",
+              "border": "0 !important",
+              "&:hover": {
+                "color": "@activeTabColor",
+                "border": "0 !important"
+              },
+              "&.active": {
+                "color": "@activeTabColor",
+                "border": "0 !important",
+                "background-color": "transparent",
+                "position": "relative"
+              }
+            },
+            "@media (max-width: 767px)": {
+              ".container": {
+                "padding-left": "0rem",
+                "padding-right": "0rem"
+              }
+            },
+            ".mbr-fallback-image.disabled": {
+              "display": "none"
+            },
+            ".mbr-fallback-image": {
+              "display": "block",
+              "background-size": "cover",
+              "background-position": "center center",
+              "width": "100%",
+              "height": "100%",
+              "position": "absolute",
+              "top": "0",
+              "& when (@bg-type = 'video')": {
+                "background-image": "url(@fallBackImage)"
+              }
+            }
+          },
+          "_name": "tabs1",
+          "_sourceTheme": "restaurantm4",
+          "_customHTML": "<section class=\"tabs1 restaurantm4_tabs1 tabs\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" group=\"Tabs\" mbr-class=\"{'mbr-parallax-background':bg.parallax}\" plugins=\"mbr-tabs\">\n\n\t<mbr-parameters>\n\t\t<header>Size</header>\n\t\t<input inline max=\"9\" min=\"0\" name=\"paddingTop\" step=\"1\" title=\"Top\" type=\"range\" value=\"3\">\n\t\t<input inline max=\"9\" min=\"0\" name=\"paddingBottom\" step=\"1\" title=\"Bottom\" type=\"range\" value=\"5\">\n\t\t<select name=\"bootstrapTabs\" title=\"Tabs Count\">\n\t\t\t<option value=\"1\">1</option>\n\t\t\t<option value=\"2\">2</option>\n\t\t\t<option value=\"3\">3</option>\n\t\t\t<option value=\"4\" selected>4</option>\n\t\t\t<option value=\"5\">5</option>\n\t\t\t<option value=\"6\">6</option>\n\t\t\t<option value=\"7\">7</option>\n\t\t\t<option value=\"8\">8</option>\n\t\t</select>\n\t\t<input inline max=\"50\" min=\"1\" name=\"items1\" step=\"1\" title=\"Tab 1 Items\" type=\"range\" value=\"6\">\n\t\t<input condition=\"bootstrapTabs>1\" inline=\"\" max=\"50\" min=\"1\" name=\"items2\" step=\"1\" title=\"Tab 2 Items\" type=\"range\" value=\"14\">\n\t\t<input condition=\"bootstrapTabs>2\" inline=\"\" max=\"50\" min=\"1\" name=\"items3\" step=\"1\" title=\"Tab 3 Items\" type=\"range\" value=\"4\">\n\t\t<input condition=\"bootstrapTabs>3\" inline=\"\" max=\"50\" min=\"1\" name=\"items4\" step=\"1\" title=\"Tab 4 Items\" type=\"range\" value=\"6\">\n\t\t<input condition=\"bootstrapTabs>4\" inline=\"\" max=\"50\" min=\"1\" name=\"items5\" step=\"1\" title=\"Tab 5 Items\" type=\"range\" value=\"4\">\n\t\t<input condition=\"bootstrapTabs>5\" inline=\"\" max=\"50\" min=\"1\" name=\"items6\" step=\"1\" title=\"Tab 6 Items\" type=\"range\" value=\"4\">\n\t\t<input condition=\"bootstrapTabs>6\" inline=\"\" max=\"50\" min=\"1\" name=\"items7\" step=\"1\" title=\"Tab 7 Items\" type=\"range\" value=\"4\">\n\t\t<input condition=\"bootstrapTabs>7\" inline=\"\" max=\"50\" min=\"1\" name=\"items8\" step=\"1\" title=\"Tab 8 Items\" type=\"range\" value=\"4\">\n\t\t<header>Show / Hide</header>\n\t\t<input checked name=\"showTitle\" title=\"Title\" type=\"checkbox\">\n\t\t<input name=\"showSubtitle\" title=\"Subtitle\" type=\"checkbox\">\n\t\t<input name=\"tabsColor\" title=\"Tabs Color\" type=\"color\" value=\"#ffffff\">\n\t\t<input name=\"activeTabColor\" title=\"Active Tab Color\" type=\"color\" value=\"#fac4c9\">\n\t\t<header>Background</header>\n\t\t<input name=\"tabsBg\" title=\"Tabs\" type=\"color\" value=\"#ffffff\">\n\t\t<fieldset name=\"bg\" parallax type=\"background\">\n\t\t\t<input selected title=\"Image\" type=\"image\" value=\"@PROJECT_PATH@/assets/images/sports-bar-food-wings-burgers-pizza-1600x896.jpg\">\n\t\t\t<input title=\"Color\" type=\"color\" value=\"#efefef\">\n\t\t\t<input title=\"Video\" type=\"video\" value=\"https://www.youtube.com/watch?v=pjiVuLVqWQg\">\n\t\t</fieldset>\n        <header condition=\"bg.type === 'video'\">Fallback Image</header>\n        <input type=\"image\" title=\"Fallback Image\" value=\"../_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n\n\t\t<input checked condition=\"bg.type=='color'\" name=\"gradientBg\" title=\"Gradient\" type=\"checkbox\">\n\t\t<input condition=\"gradientBg && bg.type == 'color'\" name=\"color2\" title=\"Color 2\" type=\"color\" value=\"#ffffff\">\n\n\t\t<input checked condition=\"bg.type !== 'color'\" name=\"overlay\" title=\"Overlay\" type=\"checkbox\">\n\t\t<input condition=\"overlay && bg.type !== 'color'\" name=\"overlayColor\" title=\"Overlay Color\" type=\"color\" value=\"#232323\">\n\t\t<input condition=\"overlay && bg.type !== 'color'\" inline max=\"1\" min=\"0\" name=\"overlayOpacity\" step=\"0.1\" title=\"Opacity\" type=\"range\" value=\"0.3\">\n\t</mbr-parameters>\n    <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n\n\n\t<div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\"></div>\n\t<div class=\"container\">\n\t\t<h3 class=\"mbr-section-title align-center mbr-white mbr-fonts-style\" data-app-selector=\".mbr-section-title\" mbr-if=\"showSubtitle\" mbr-theme-style=\"display-5\">\n\t\t\t<i>Discover</i>\n\t\t</h3>\n\t\t<h2 class=\"mbr-section-subtitle align-center mbr-bold mbr-fonts-style\" data-app-selector=\".mbr-section-subtitle\" mbr-if=\"showTitle\" mbr-theme-style=\"display-1\">\n\t\t\tGrub</h2>\n\t\t<div class=\"media-container-row\">\n\t\t\t<div class=\"col-12 col-md-10\">\n\t\t\t\t<ul class=\"nav nav-tabs\" data-app-placeholder=\"Type Title\" role=\"tablist\">\n\t\t\t\t\t<li class=\"nav-item\" data-toolbar=\"-mbrBtnAdd,-mbrBtnMove,-mbrBtnColor,-mbrLink,-mbrBtnRemove\" mbr-buttons mbr-theme-style=\"display-5\" role=\"presentation\"><a aria-controls=\"tech-tab1-content\" class=\"nav-link mbr-fonts-style show active\" data-toggle=\"tab\" href=\"#tabs1-0_tab0\" role=\"tab\" data-app-placeholder=\"Type Text\" aria-selected=\"true\">Appetizers </a></li>\n\t\t\t\t\t<li class=\"nav-item\" data-toolbar=\"-mbrBtnAdd,-mbrBtnMove,-mbrBtnColor,-mbrLink,-mbrBtnRemove\" mbr-buttons mbr-if=\"bootstrapTabs > 1\" mbr-theme-style=\"display-5\" role=\"presentation\"><a aria-controls=\"tech-tab2-content\" class=\"nav-link mbr-fonts-style active\" data-toggle=\"tab\" href=\"#tabs1-0_tab1\" role=\"tab\" data-app-placeholder=\"Type Text\" aria-selected=\"true\">Wings</a></li>\n\t\t\t\t\t<li class=\"nav-item\" data-toolbar=\"-mbrBtnAdd,-mbrBtnMove,-mbrBtnColor,-mbrLink,-mbrBtnRemove\" mbr-buttons mbr-if=\"bootstrapTabs > 2\" mbr-theme-style=\"display-5\" role=\"presentation\"><a aria-controls=\"tech-tab3-content\" class=\"nav-link mbr-fonts-style\" data-toggle=\"tab\" href=\"#tabs1-0_tab2\" role=\"tab\" data-app-placeholder=\"Type Text\" aria-selected=\"true\">Burgers</a></li>\n\t\t\t\t\t<li class=\"nav-item\" data-toolbar=\"-mbrBtnAdd,-mbrBtnMove,-mbrBtnColor,-mbrLink,-mbrBtnRemove\" mbr-buttons mbr-if=\"bootstrapTabs > 3\" mbr-theme-style=\"display-5\" role=\"presentation\"><a aria-controls=\"tech-tab4-content\" class=\"nav-link mbr-fonts-style active\" data-toggle=\"tab\" href=\"#tabs1-0_tab3\" role=\"tab\" data-app-placeholder=\"Type Text\" aria-selected=\"true\">Pizzas</a></li>\n\t\t\t\t\t<li class=\"nav-item\" data-toolbar=\"-mbrBtnAdd,-mbrBtnMove,-mbrBtnColor,-mbrLink,-mbrBtnRemove\" mbr-buttons mbr-if=\"bootstrapTabs > 4\" mbr-theme-style=\"display-5\" role=\"presentation\"><a aria-controls=\"tech-tab5-content\" class=\"nav-link mbr-fonts-style active\" data-toggle=\"tab\" href=\"#tabs1-0_tab4\" role=\"tab\" data-app-placeholder=\"Type Text\" aria-selected=\"true\">Entrees</a></li>\n\t\t\t\t\t<li class=\"nav-item\" data-toolbar=\"-mbrBtnAdd,-mbrBtnMove,-mbrBtnColor,-mbrLink,-mbrBtnRemove\" mbr-buttons mbr-if=\"bootstrapTabs > 5\" mbr-theme-style=\"display-5\" role=\"presentation\"><a aria-controls=\"tech-tab6-content\" class=\"nav-link mbr-fonts-style active\" data-toggle=\"tab\" href=\"#tabs1-0_tab5\" role=\"tab\" data-app-placeholder=\"Type Text\" aria-selected=\"true\">Desserts</a></li>\n\t\t\t\t\t<li class=\"nav-item\" data-toolbar=\"-mbrBtnAdd,-mbrBtnMove,-mbrBtnColor,-mbrLink,-mbrBtnRemove\" mbr-buttons mbr-if=\"bootstrapTabs > 6\" mbr-theme-style=\"display-5\" role=\"presentation\">\n\t\t\t\t\t\t<a aria-controls=\"tech-tab7-content\" aria-expanded=\"true\" class=\"nav-link mbr-fonts-style\" data-toggle=\"tab\" href=\"#tech-tab7-content\" id=\"tech-tab7\" role=\"tab\"> Other </a>\n\t\t\t\t\t</li>\n\t\t\t\t\t<li class=\"nav-item\" data-toolbar=\"-mbrBtnAdd,-mbrBtnMove,-mbrBtnColor,-mbrLink,-mbrBtnRemove\" mbr-buttons mbr-if=\"bootstrapTabs > 7\" mbr-theme-style=\"display-5\" role=\"presentation\">\n\t\t\t\t\t\t<a aria-controls=\"tech-tab8-content\" aria-expanded=\"true\" class=\"nav-link mbr-fonts-style\" data-toggle=\"tab\" href=\"#tech-tab8-content\" id=\"tech-tab8\" role=\"tab\"> Other </a>\n\t\t\t\t\t</li>\n\t\t\t\t</ul>\n\t\t\t\t<div class=\"tab-content\">\n\t\t\t\t\t<div aria-labelledby=\"tech-tab1\" class=\"tab-pane active\" id=\"tech-tab1-content\" role=\"tabpanel\">\n\t\t\t\t\t\t<div class=\"row\" mbr-list mbr-list-grow=\"items1\">\n\t\t\t\t\t\t\t<div class=\"col-md-12 col-lg-6 pb-3 item-wrap\">\n\t\t\t\t\t\t\t\t<div class=\"row align-items-start\">\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"image-wrap\">\n\t\t\t\t\t\t\t\t\t\t\t<img alt src=\"@PROJECT_PATH@/assets/images/nachos-216x216.jpg\">\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row card-box\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h3 class=\"mbr-text mbr-fonts-style align-left\" data-app-selector=\".mbr-text\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tLoaded Nachos</h3>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-price  mbr-fonts-style align-right\" data-app-selector=\".mbr-price\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t$15 </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-desc mbr-fonts-style align-left\" data-app-selector=\".mbr-desc\" mbr-theme-style=\"display-7\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tCrunchy tortilla chips smothered in melted cheese and topped with seasoned ground beef, beans, jalapeños, sour cream, salsa, and guacamole.</p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"col-md-12 col-lg-6 pb-3 item-wrap\">\n\t\t\t\t\t\t\t\t<div class=\"row align-items-start\">\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"image-wrap\">\n\t\t\t\t\t\t\t\t\t\t\t<img alt src=\"@PROJECT_PATH@/assets/images/mozzarella-stic-216x216.jpg\">\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row card-box\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h3 class=\"mbr-text mbr-fonts-style align-left\" data-app-selector=\".mbr-text\" mbr-theme-style=\"display-5\">Mozzarella Sticks</h3>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-price  mbr-fonts-style align-right\" data-app-selector=\".mbr-price\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t$</p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-desc mbr-fonts-style align-left\" data-app-selector=\".mbr-desc\" mbr-theme-style=\"display-7\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tBreaded mozzarella cheese, deep-fried until golden and crispy. 8 sticks. Served with&nbsp;marinara sauce for dipping.</p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div><div class=\"col-md-12 col-lg-6 pb-3 item-wrap\">\n\t\t\t\t\t\t\t\t<div class=\"row align-items-start\">\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"image-wrap\">\n\t\t\t\t\t\t\t\t\t\t\t<img alt src=\"@PROJECT_PATH@/assets/images/soft-pretzel-216x216.jpg\">\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row card-box\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h3 class=\"mbr-text mbr-fonts-style align-left\" data-app-selector=\".mbr-text\" mbr-theme-style=\"display-5\">Soft Pretzel</h3>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-price  mbr-fonts-style align-right\" data-app-selector=\".mbr-price\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t$15 </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-desc mbr-fonts-style align-left\" data-app-selector=\".mbr-desc\" mbr-theme-style=\"display-7\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tWarm, soft, and chewy butter-salted pretzels served with a side of rich, creamy cheddar cheese dip. </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div><div class=\"col-md-12 col-lg-6 pb-3 item-wrap\">\n\t\t\t\t\t\t\t\t<div class=\"row align-items-start\">\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"image-wrap\">\n\t\t\t\t\t\t\t\t\t\t\t<img alt src=\"@PROJECT_PATH@/assets/images/potato-wedges-216x216.jpg\">\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row card-box\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h3 class=\"mbr-text mbr-fonts-style align-left\" data-app-selector=\".mbr-text\" mbr-theme-style=\"display-5\">Potato Wedges</h3>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-price  mbr-fonts-style align-right\" data-app-selector=\".mbr-price\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t$15 </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-desc mbr-fonts-style align-left\" data-app-selector=\".mbr-desc\" mbr-theme-style=\"display-7\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tCrispy on the outside, fluffy on the inside, these golden, thick-cut potato wedges are seasoned with savory herbs and spices. </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div><div class=\"col-md-12 col-lg-6 pb-3 item-wrap\">\n\t\t\t\t\t\t\t\t<div class=\"row align-items-start\">\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"image-wrap\">\n\t\t\t\t\t\t\t\t\t\t\t<img alt src=\"@PROJECT_PATH@/assets/images/onion-rings-216x216.jpg\">\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row card-box\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h3 class=\"mbr-text mbr-fonts-style align-left\" data-app-selector=\".mbr-text\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tOnion Rings</h3>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-price  mbr-fonts-style align-right\" data-app-selector=\".mbr-price\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t$15 </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-desc mbr-fonts-style align-left\" data-app-selector=\".mbr-desc\" mbr-theme-style=\"display-7\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tThick-cut, golden-fried onion rings offering a perfect balance of crispy texture and savory sweetness. </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div><div class=\"col-md-12 col-lg-6 pb-3 item-wrap\">\n\t\t\t\t\t\t\t\t<div class=\"row align-items-start\">\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"image-wrap\">\n\t\t\t\t\t\t\t\t\t\t\t<img alt src=\"@PROJECT_PATH@/assets/images/chips-salsa-216x216.jpg\">\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row card-box\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h3 class=\"mbr-text mbr-fonts-style align-left\" data-app-selector=\".mbr-text\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tChips &amp; Salsa</h3>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-price  mbr-fonts-style align-right\" data-app-selector=\".mbr-price\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t$15 </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-desc mbr-fonts-style align-left\" data-app-selector=\".mbr-desc\" mbr-theme-style=\"display-7\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tCrispy, golden, house-made corn tortilla chips served with our signature, fresh-roasted tomato salsa. </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div></div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div aria-labelledby=\"tech-tab2\" class=\"tab-pane\" id=\"tech-tab2-content\" role=\"tabpanel\">\n\t\t\t\t\t\t<div class=\"row\" mbr-list mbr-list-grow=\"items2\">\n\t\t\t\t\t\t\t<div class=\"col-md-12 col-lg-6 pb-3 item-wrap\">\n\t\t\t\t\t\t\t\t<div class=\"row align-items-start\">\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"image-wrap\">\n\t\t\t\t\t\t\t\t\t\t\t<img alt src=\"@PROJECT_PATH@/assets/images/mbr-216x144.jpeg\">\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row card-box\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h3 class=\"mbr-text mbr-fonts-style align-left\" data-app-selector=\".mbr-text\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tMild</h3>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-price  mbr-fonts-style align-right\" data-app-selector=\".mbr-price\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t$15 </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-desc mbr-fonts-style align-left\" data-app-selector=\".mbr-desc\" mbr-theme-style=\"display-7\">The classic Buffalo experience without the intense burn, focusing on a rich, buttery flavor and a gentle, warming tingle.<br></p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"col-md-12 col-lg-6 pb-3 item-wrap\">\n\t\t\t\t\t\t\t\t<div class=\"row align-items-start\">\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"image-wrap\">\n\t\t\t\t\t\t\t\t\t\t\t<img alt src=\"@PROJECT_PATH@/assets/images/mbr-1-216x144.jpeg\">\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row card-box\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h3 class=\"mbr-text mbr-fonts-style align-left\" data-app-selector=\".mbr-text\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tTeriyaki</h3>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-price  mbr-fonts-style align-right\" data-app-selector=\".mbr-price\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t$15 </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-desc mbr-fonts-style align-left\" data-app-selector=\".mbr-desc\" mbr-theme-style=\"display-7\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tSavory-sweet staple of Japanese-American fusion, featuring a dark, glossy lacquer and a deep umami backbone.</p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div><div class=\"col-md-12 col-lg-6 pb-3 item-wrap\">\n\t\t\t\t\t\t\t\t<div class=\"row align-items-start\">\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"image-wrap\">\n\t\t\t\t\t\t\t\t\t\t\t<img alt src=\"@PROJECT_PATH@/assets/images/mbr-216x148.jpeg\">\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row card-box\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h3 class=\"mbr-text mbr-fonts-style align-left\" data-app-selector=\".mbr-text\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tGarlic Parmesan</h3>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-price  mbr-fonts-style align-right\" data-app-selector=\".mbr-price\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t$15 </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-desc mbr-fonts-style align-left\" data-app-selector=\".mbr-desc\" mbr-theme-style=\"display-7\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tSavory, buttery masterpiece that skips the chili heat in favor of a rich, umami-packed punch. </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div><div class=\"col-md-12 col-lg-6 pb-3 item-wrap\">\n\t\t\t\t\t\t\t\t<div class=\"row align-items-start\">\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"image-wrap\">\n\t\t\t\t\t\t\t\t\t\t\t<img alt src=\"@PROJECT_PATH@/assets/images/mbr-1-216x122.jpeg\">\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row card-box\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h3 class=\"mbr-text mbr-fonts-style align-left\" data-app-selector=\".mbr-text\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tBourbon BBQ</h3>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-price  mbr-fonts-style align-right\" data-app-selector=\".mbr-price\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t$15 </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-desc mbr-fonts-style align-left\" data-app-selector=\".mbr-desc\" mbr-theme-style=\"display-7\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tSmoky, soul-satisfying classic defined by a rich, boozy depth and a thick, dark glaze. </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div><div class=\"col-md-12 col-lg-6 pb-3 item-wrap\">\n\t\t\t\t\t\t\t\t<div class=\"row align-items-start\">\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"image-wrap\">\n\t\t\t\t\t\t\t\t\t\t\t<img alt src=\"@PROJECT_PATH@/assets/images/mbr-7-216x144.jpeg\">\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row card-box\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h3 class=\"mbr-text mbr-fonts-style align-left\" data-app-selector=\".mbr-text\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tMango Habanero</h3>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-price  mbr-fonts-style align-right\" data-app-selector=\".mbr-price\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t$15 </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-desc mbr-fonts-style align-left\" data-app-selector=\".mbr-desc\" mbr-theme-style=\"display-7\">High-heat tropical powerhouse, famous for a \"sweet start\" that rapidly evolves into a scorching, long-lasting burn.</p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div><div class=\"col-md-12 col-lg-6 pb-3 item-wrap\">\n\t\t\t\t\t\t\t\t<div class=\"row align-items-start\">\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"image-wrap\">\n\t\t\t\t\t\t\t\t\t\t\t<img alt src=\"@PROJECT_PATH@/assets/images/mbr-216x162.jpeg\">\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row card-box\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h3 class=\"mbr-text mbr-fonts-style align-left\" data-app-selector=\".mbr-text\" mbr-theme-style=\"display-5\">Pineapple-Sriracha</h3>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-price  mbr-fonts-style align-right\" data-app-selector=\".mbr-price\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t$15 </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-desc mbr-fonts-style align-left\" data-app-selector=\".mbr-desc\" mbr-theme-style=\"display-7\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tTropical-fusion favorite, delivering a bright, sun-drenched sweetness followed by a distinctive garlicky hum. </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div><div class=\"col-md-12 col-lg-6 pb-3 item-wrap\">\n\t\t\t\t\t\t\t\t<div class=\"row align-items-start\">\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"image-wrap\">\n\t\t\t\t\t\t\t\t\t\t\t<img alt src=\"@PROJECT_PATH@/assets/images/mbr-216x288.jpeg\">\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row card-box\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h3 class=\"mbr-text mbr-fonts-style align-left\" data-app-selector=\".mbr-text\" mbr-theme-style=\"display-5\">Lemon Pepper</h3>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-price  mbr-fonts-style align-right\" data-app-selector=\".mbr-price\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t$15 </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-desc mbr-fonts-style align-left\" data-app-selector=\".mbr-desc\" mbr-theme-style=\"display-7\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tSavory, citrus-forward powerhouse, celebrated for their vibrant acidity and cracked-pepper punch.</p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div><div class=\"col-md-12 col-lg-6 pb-3 item-wrap\">\n\t\t\t\t\t\t\t\t<div class=\"row align-items-start\">\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"image-wrap\">\n\t\t\t\t\t\t\t\t\t\t\t<img alt src=\"@PROJECT_PATH@/assets/images/mbr-8-216x144.jpeg\">\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row card-box\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h3 class=\"mbr-text mbr-fonts-style align-left\" data-app-selector=\".mbr-text\" mbr-theme-style=\"display-5\">Classic Buffalo</h3>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-price  mbr-fonts-style align-right\" data-app-selector=\".mbr-price\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t$15 </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-desc mbr-fonts-style align-left\" data-app-selector=\".mbr-desc\" mbr-theme-style=\"display-7\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tThe gold standard of wing culture, defined by a bright, vinegary punch and a smooth, rich finish.</p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div><div class=\"col-md-12 col-lg-6 pb-3 item-wrap\">\n\t\t\t\t\t\t\t\t<div class=\"row align-items-start\">\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"image-wrap\">\n\t\t\t\t\t\t\t\t\t\t\t<img alt src=\"@PROJECT_PATH@/assets/images/mbr-4-216x144.jpeg\">\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row card-box\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h3 class=\"mbr-text mbr-fonts-style align-left\" data-app-selector=\".mbr-text\" mbr-theme-style=\"display-5\">Carolina Gold</h3>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-price  mbr-fonts-style align-right\" data-app-selector=\".mbr-price\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t$15 </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-desc mbr-fonts-style align-left\" data-app-selector=\".mbr-desc\" mbr-theme-style=\"display-7\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tTangy, Southern-style classic defined by a bold mustard base rather than the usual tomato or vinegar. </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div><div class=\"col-md-12 col-lg-6 pb-3 item-wrap\">\n\t\t\t\t\t\t\t\t<div class=\"row align-items-start\">\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"image-wrap\">\n\t\t\t\t\t\t\t\t\t\t\t<img alt src=\"@PROJECT_PATH@/assets/images/mbr-3-216x144.jpeg\">\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row card-box\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h3 class=\"mbr-text mbr-fonts-style align-left\" data-app-selector=\".mbr-text\" mbr-theme-style=\"display-5\">Sweet Thai Chili</h3>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-price  mbr-fonts-style align-right\" data-app-selector=\".mbr-price\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t$15 </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-desc mbr-fonts-style align-left\" data-app-selector=\".mbr-desc\" mbr-theme-style=\"display-7\">Bright, exotic favorite known for their vibrant red glaze and a perfect harmony of mild heat and high sweetness. </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div><div class=\"col-md-12 col-lg-6 pb-3 item-wrap\">\n\t\t\t\t\t\t\t\t<div class=\"row align-items-start\">\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"image-wrap\">\n\t\t\t\t\t\t\t\t\t\t\t<img alt src=\"@PROJECT_PATH@/assets/images/mbr-9-216x144.jpeg\">\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row card-box\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h3 class=\"mbr-text mbr-fonts-style align-left\" data-app-selector=\".mbr-text\" mbr-theme-style=\"display-5\">Spicy Honey Garlic</h3>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-price  mbr-fonts-style align-right\" data-app-selector=\".mbr-price\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t$15 </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-desc mbr-fonts-style align-left\" data-app-selector=\".mbr-desc\" mbr-theme-style=\"display-7\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tSweet-and-heat crowd-pleaser, featuring a thick, sticky glaze that balances savory aromatics with a glossy finish. </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div><div class=\"col-md-12 col-lg-6 pb-3 item-wrap\">\n\t\t\t\t\t\t\t\t<div class=\"row align-items-start\">\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"image-wrap\">\n\t\t\t\t\t\t\t\t\t\t\t<img alt src=\"@PROJECT_PATH@/assets/images/mbr-10-216x144.jpeg\">\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row card-box\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h3 class=\"mbr-text mbr-fonts-style align-left\" data-app-selector=\".mbr-text\" mbr-theme-style=\"display-5\">Nashville Hot</h3>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-price  mbr-fonts-style align-right\" data-app-selector=\".mbr-price\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t$15 </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-desc mbr-fonts-style align-left\" data-app-selector=\".mbr-desc\" mbr-theme-style=\"display-7\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tFiery, oil-based glaze and a heavy-hitting smoky sweetness. </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div><div class=\"col-md-12 col-lg-6 pb-3 item-wrap\">\n\t\t\t\t\t\t\t\t<div class=\"row align-items-start\">\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"image-wrap\">\n\t\t\t\t\t\t\t\t\t\t\t<img alt src=\"@PROJECT_PATH@/assets/images/mbr-2-216x122.jpeg\">\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row card-box\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h3 class=\"mbr-text mbr-fonts-style align-left\" data-app-selector=\".mbr-text\" mbr-theme-style=\"display-5\">Hot &amp; Tangy</h3>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-price  mbr-fonts-style align-right\" data-app-selector=\".mbr-price\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t$15 </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-desc mbr-fonts-style align-left\" data-app-selector=\".mbr-desc\" mbr-theme-style=\"display-7\">Sharp, acidic zip that cuts through the richness of the chicken, balanced by a peppery, moderate heat. </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div><div class=\"col-md-12 col-lg-6 pb-3 item-wrap\">\n\t\t\t\t\t\t\t\t<div class=\"row align-items-start\">\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"image-wrap\">\n\t\t\t\t\t\t\t\t\t\t\t<img alt src=\"@PROJECT_PATH@/assets/images/mbr-216x107.jpeg\">\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row card-box\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h3 class=\"mbr-text mbr-fonts-style align-left\" data-app-selector=\".mbr-text\" mbr-theme-style=\"display-5\">Carolina Reaper</h3>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-price  mbr-fonts-style align-right\" data-app-selector=\".mbr-price\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t$15 </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-desc mbr-fonts-style align-left\" data-app-selector=\".mbr-desc\" mbr-theme-style=\"display-7\">Deceptively sweet and fruity initial flavor that is quickly overtaken by a blistering, \"molten lava\" heat. </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div></div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div aria-labelledby=\"tech-tab3\" class=\"tab-pane\" id=\"tech-tab3-content\" role=\"tabpanel\">\n\t\t\t\t\t\t<div class=\"row\" mbr-list mbr-list-grow=\"items3\">\n\t\t\t\t\t\t\t<div class=\"col-md-12 col-lg-6 pb-3 item-wrap\">\n\t\t\t\t\t\t\t\t<div class=\"row align-items-start\">\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"image-wrap\">\n\t\t\t\t\t\t\t\t\t\t\t<img alt src=\"@PROJECT_PATH@/assets/images/mbr-216x216.jpg\">\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row card-box\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h3 class=\"mbr-text mbr-fonts-style align-left\" data-app-selector=\".mbr-text\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tBeastmode Loaded Burger</h3>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-price  mbr-fonts-style align-right\" data-app-selector=\".mbr-price\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t$15 </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-desc mbr-fonts-style align-left\" data-app-selector=\".mbr-desc\" mbr-theme-style=\"display-7\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tMulti-patty option with stadium-style toppings including onion rings and even mac &amp; cheese. </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"col-md-12 col-lg-6 pb-3 item-wrap\">\n\t\t\t\t\t\t\t\t<div class=\"row align-items-start\">\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"image-wrap\">\n\t\t\t\t\t\t\t\t\t\t\t<img alt src=\"@PROJECT_PATH@/assets/images/mbr-216x216.jpeg\">\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row card-box\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h3 class=\"mbr-text mbr-fonts-style align-left\" data-app-selector=\".mbr-text\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tThe Heat</h3>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-price  mbr-fonts-style align-right\" data-app-selector=\".mbr-price\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t$15 </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-desc mbr-fonts-style align-left\" data-app-selector=\".mbr-desc\" mbr-theme-style=\"display-7\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tBurger with lettuce, tomato, jalapeños, pepper jack cheese, and hot honey.</p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div><div class=\"col-md-12 col-lg-6 pb-3 item-wrap\">\n\t\t\t\t\t\t\t\t<div class=\"row align-items-start\">\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"image-wrap\">\n\t\t\t\t\t\t\t\t\t\t\t<img alt src=\"@PROJECT_PATH@/assets/images/mbr-12-216x144.jpeg\">\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row card-box\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h3 class=\"mbr-text mbr-fonts-style align-left\" data-app-selector=\".mbr-text\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tSmash Burger</h3>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-price  mbr-fonts-style align-right\" data-app-selector=\".mbr-price\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t$15 </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-desc mbr-fonts-style align-left\" data-app-selector=\".mbr-desc\" mbr-theme-style=\"display-7\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tThin, crispy-edged patties topped with grilled onions and secret sauce. </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div><div class=\"col-md-12 col-lg-6 pb-3 item-wrap\">\n\t\t\t\t\t\t\t\t<div class=\"row align-items-start\">\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"image-wrap\">\n\t\t\t\t\t\t\t\t\t\t\t<img alt src=\"@PROJECT_PATH@/assets/images/mbr-14-216x144.jpeg\">\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row card-box\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h3 class=\"mbr-text mbr-fonts-style align-left\" data-app-selector=\".mbr-text\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tBacon Cheeseburger</h3>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-price  mbr-fonts-style align-right\" data-app-selector=\".mbr-price\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t$15 </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-desc mbr-fonts-style align-left\" data-app-selector=\".mbr-desc\" mbr-theme-style=\"display-7\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t5 types of cheeses with triple cheddar.</p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div></div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div aria-labelledby=\"tech-tab4\" class=\"tab-pane\" id=\"tech-tab4-content\" role=\"tabpanel\">\n\t\t\t\t\t\t<div class=\"row\" mbr-list mbr-list-grow=\"items4\">\n\t\t\t\t\t\t\t<div class=\"col-md-12 col-lg-6 pb-3 item-wrap\">\n\t\t\t\t\t\t\t\t<div class=\"row align-items-start\">\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"image-wrap\">\n\t\t\t\t\t\t\t\t\t\t\t<img alt src=\"@PROJECT_PATH@/assets/images/mbr-3-216x122.jpeg\">\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row card-box\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h3 class=\"mbr-text mbr-fonts-style align-left\" data-app-selector=\".mbr-text\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tMeat Lovers</h3>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-price  mbr-fonts-style align-right\" data-app-selector=\".mbr-price\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t$15 </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-desc mbr-fonts-style align-left\" data-app-selector=\".mbr-desc\" mbr-theme-style=\"display-7\">Pepperoni, Italian sausage, bacon, ham, and ground beef. </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"col-md-12 col-lg-6 pb-3 item-wrap\">\n\t\t\t\t\t\t\t\t<div class=\"row align-items-start\">\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"image-wrap\">\n\t\t\t\t\t\t\t\t\t\t\t<img alt src=\"@PROJECT_PATH@/assets/images/mbr-4-216x122.jpeg\">\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row card-box\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h3 class=\"mbr-text mbr-fonts-style align-left\" data-app-selector=\".mbr-text\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tSupreme </h3>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-price  mbr-fonts-style align-right\" data-app-selector=\".mbr-price\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t$15 </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-desc mbr-fonts-style align-left\" data-app-selector=\".mbr-desc\" mbr-theme-style=\"display-7\">Pepperoni, sausage, onions, green peppers, mushrooms, and black olives. </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div><div class=\"col-md-12 col-lg-6 pb-3 item-wrap\">\n\t\t\t\t\t\t\t\t<div class=\"row align-items-start\">\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"image-wrap\">\n\t\t\t\t\t\t\t\t\t\t\t<img alt src=\"@PROJECT_PATH@/assets/images/mbr-15-216x144.jpeg\">\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row card-box\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h3 class=\"mbr-text mbr-fonts-style align-left\" data-app-selector=\".mbr-text\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tMargherita </h3>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-price  mbr-fonts-style align-right\" data-app-selector=\".mbr-price\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t$15 </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-desc mbr-fonts-style align-left\" data-app-selector=\".mbr-desc\" mbr-theme-style=\"display-7\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t Fresh mozzarella, San Marzano tomatoes, fresh basil leaves, and extra virgin olive oil.</p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div><div class=\"col-md-12 col-lg-6 pb-3 item-wrap\">\n\t\t\t\t\t\t\t\t<div class=\"row align-items-start\">\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"image-wrap\">\n\t\t\t\t\t\t\t\t\t\t\t<img alt src=\"@PROJECT_PATH@/assets/images/mbr-16-216x144.jpeg\">\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row card-box\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h3 class=\"mbr-text mbr-fonts-style align-left\" data-app-selector=\".mbr-text\" mbr-theme-style=\"display-5\">Southwest Steak</h3>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-price  mbr-fonts-style align-right\" data-app-selector=\".mbr-price\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t$15 </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-desc mbr-fonts-style align-left\" data-app-selector=\".mbr-desc\" mbr-theme-style=\"display-7\">Ribeye steak with sautéed peppers, onions, and jalapeños.</p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div><div class=\"col-md-12 col-lg-6 pb-3 item-wrap\">\n\t\t\t\t\t\t\t\t<div class=\"row align-items-start\">\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"image-wrap\">\n\t\t\t\t\t\t\t\t\t\t\t<img alt src=\"@PROJECT_PATH@/assets/images/mbr-17-216x144.jpeg\">\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row card-box\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h3 class=\"mbr-text mbr-fonts-style align-left\" data-app-selector=\".mbr-text\" mbr-theme-style=\"display-5\">Pepperoni</h3>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-price  mbr-fonts-style align-right\" data-app-selector=\".mbr-price\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t$15 </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-desc mbr-fonts-style align-left\" data-app-selector=\".mbr-desc\" mbr-theme-style=\"display-7\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tJust a lot of pepperoni and cheese!</p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div><div class=\"col-md-12 col-lg-6 pb-3 item-wrap\">\n\t\t\t\t\t\t\t\t<div class=\"row align-items-start\">\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"image-wrap\">\n\t\t\t\t\t\t\t\t\t\t\t<img alt src=\"@PROJECT_PATH@/assets/images/mbr-216x324.jpeg\">\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row card-box\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h3 class=\"mbr-text mbr-fonts-style align-left\" data-app-selector=\".mbr-text\" mbr-theme-style=\"display-5\">Cheese</h3>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-price  mbr-fonts-style align-right\" data-app-selector=\".mbr-price\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t$15 </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-desc mbr-fonts-style align-left\" data-app-selector=\".mbr-desc\" mbr-theme-style=\"display-7\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t5 types of cheeses:&nbsp;Mozzarella, Provolone, Parmesan, Ricotta, and Gouda.</p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div></div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div aria-labelledby=\"tech-tab5\" class=\"tab-pane\" id=\"tech-tab5-content\" role=\"tabpanel\">\n\t\t\t\t\t\t<div class=\"row\" mbr-list mbr-list-grow=\"items5\">\n\t\t\t\t\t\t\t<div class=\"col-md-12 col-lg-6 pb-3 item-wrap\">\n\t\t\t\t\t\t\t\t<div class=\"row align-items-start\">\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"image-wrap\">\n\t\t\t\t\t\t\t\t\t\t\t<img alt src=\"../_images/img/delicious1.jpg\">\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row card-box\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h3 class=\"mbr-text mbr-fonts-style align-left\" data-app-selector=\".mbr-text\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tPotato Pizza </h3>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-price  mbr-fonts-style align-right\" data-app-selector=\".mbr-price\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t$15 </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-desc mbr-fonts-style align-left\" data-app-selector=\".mbr-desc\" mbr-theme-style=\"display-7\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tMushroom/ Olive/ Rice </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"col-md-12 col-lg-6 pb-3 item-wrap\">\n\t\t\t\t\t\t\t\t<div class=\"row align-items-start\">\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"image-wrap\">\n\t\t\t\t\t\t\t\t\t\t\t<img alt src=\"../_images/img/delicious1.jpg\">\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row card-box\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h3 class=\"mbr-text mbr-fonts-style align-left\" data-app-selector=\".mbr-text\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tPotato Pizza </h3>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-price  mbr-fonts-style align-right\" data-app-selector=\".mbr-price\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t$15 </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-desc mbr-fonts-style align-left\" data-app-selector=\".mbr-desc\" mbr-theme-style=\"display-7\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tMushroom/ Olive/ Rice </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div><div class=\"col-md-12 col-lg-6 pb-3 item-wrap\">\n\t\t\t\t\t\t\t\t<div class=\"row align-items-start\">\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"image-wrap\">\n\t\t\t\t\t\t\t\t\t\t\t<img alt src=\"../_images/img/delicious1.jpg\">\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row card-box\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h3 class=\"mbr-text mbr-fonts-style align-left\" data-app-selector=\".mbr-text\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tPotato Pizza </h3>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-price  mbr-fonts-style align-right\" data-app-selector=\".mbr-price\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t$15 </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-desc mbr-fonts-style align-left\" data-app-selector=\".mbr-desc\" mbr-theme-style=\"display-7\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tMushroom/ Olive/ Rice </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div><div class=\"col-md-12 col-lg-6 pb-3 item-wrap\">\n\t\t\t\t\t\t\t\t<div class=\"row align-items-start\">\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"image-wrap\">\n\t\t\t\t\t\t\t\t\t\t\t<img alt src=\"../_images/img/delicious1.jpg\">\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row card-box\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h3 class=\"mbr-text mbr-fonts-style align-left\" data-app-selector=\".mbr-text\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tPotato Pizza </h3>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-price  mbr-fonts-style align-right\" data-app-selector=\".mbr-price\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t$15 </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-desc mbr-fonts-style align-left\" data-app-selector=\".mbr-desc\" mbr-theme-style=\"display-7\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tMushroom/ Olive/ Rice </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div></div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div aria-labelledby=\"tech-tab6\" class=\"tab-pane\" id=\"tech-tab6-content\" role=\"tabpanel\">\n\t\t\t\t\t\t<div class=\"row\" mbr-list mbr-list-grow=\"items6\">\n\t\t\t\t\t\t\t<div class=\"col-md-12 col-lg-6 pb-3 item-wrap\">\n\t\t\t\t\t\t\t\t<div class=\"row align-items-start\">\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"image-wrap\">\n\t\t\t\t\t\t\t\t\t\t\t<img alt src=\"../_images/img/delicious1.jpg\">\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row card-box\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h3 class=\"mbr-text mbr-fonts-style align-left\" data-app-selector=\".mbr-text\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tPotato Pizza </h3>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-price  mbr-fonts-style align-right\" data-app-selector=\".mbr-price\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t$15 </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-desc mbr-fonts-style align-left\" data-app-selector=\".mbr-desc\" mbr-theme-style=\"display-7\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tMushroom/ Olive/ Rice </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"col-md-12 col-lg-6 pb-3 item-wrap\">\n\t\t\t\t\t\t\t\t<div class=\"row align-items-start\">\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"image-wrap\">\n\t\t\t\t\t\t\t\t\t\t\t<img alt src=\"../_images/img/delicious1.jpg\">\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row card-box\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h3 class=\"mbr-text mbr-fonts-style align-left\" data-app-selector=\".mbr-text\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tPotato Pizza </h3>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-price  mbr-fonts-style align-right\" data-app-selector=\".mbr-price\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t$15 </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-desc mbr-fonts-style align-left\" data-app-selector=\".mbr-desc\" mbr-theme-style=\"display-7\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tMushroom/ Olive/ Rice </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div><div class=\"col-md-12 col-lg-6 pb-3 item-wrap\">\n\t\t\t\t\t\t\t\t<div class=\"row align-items-start\">\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"image-wrap\">\n\t\t\t\t\t\t\t\t\t\t\t<img alt src=\"../_images/img/delicious1.jpg\">\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row card-box\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h3 class=\"mbr-text mbr-fonts-style align-left\" data-app-selector=\".mbr-text\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tPotato Pizza </h3>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-price  mbr-fonts-style align-right\" data-app-selector=\".mbr-price\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t$15 </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-desc mbr-fonts-style align-left\" data-app-selector=\".mbr-desc\" mbr-theme-style=\"display-7\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tMushroom/ Olive/ Rice </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div><div class=\"col-md-12 col-lg-6 pb-3 item-wrap\">\n\t\t\t\t\t\t\t\t<div class=\"row align-items-start\">\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"image-wrap\">\n\t\t\t\t\t\t\t\t\t\t\t<img alt src=\"../_images/img/delicious1.jpg\">\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row card-box\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h3 class=\"mbr-text mbr-fonts-style align-left\" data-app-selector=\".mbr-text\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tPotato Pizza </h3>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-price  mbr-fonts-style align-right\" data-app-selector=\".mbr-price\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t$15 </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-desc mbr-fonts-style align-left\" data-app-selector=\".mbr-desc\" mbr-theme-style=\"display-7\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tMushroom/ Olive/ Rice </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div></div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div aria-labelledby=\"tech-tab7\" class=\"tab-pane\" id=\"tech-tab7-content\" role=\"tabpanel\">\n\t\t\t\t\t\t<div class=\"row\" mbr-list mbr-list-grow=\"items7\">\n\t\t\t\t\t\t\t<div class=\"col-md-12 col-lg-6 pb-3 item-wrap\">\n\t\t\t\t\t\t\t\t<div class=\"row align-items-start\">\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"image-wrap\">\n\t\t\t\t\t\t\t\t\t\t\t<img alt src=\"../_images/img/delicious1.jpg\">\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row card-box\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h3 class=\"mbr-text mbr-fonts-style align-left\" data-app-selector=\".mbr-text\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tPotato Pizza </h3>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-price  mbr-fonts-style align-right\" data-app-selector=\".mbr-price\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t$15 </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-desc mbr-fonts-style align-left\" data-app-selector=\".mbr-desc\" mbr-theme-style=\"display-7\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tMushroom/ Olive/ Rice </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"col-md-12 col-lg-6 pb-3 item-wrap\">\n\t\t\t\t\t\t\t\t<div class=\"row align-items-start\">\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"image-wrap\">\n\t\t\t\t\t\t\t\t\t\t\t<img alt src=\"../_images/img/delicious1.jpg\">\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row card-box\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h3 class=\"mbr-text mbr-fonts-style align-left\" data-app-selector=\".mbr-text\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tPotato Pizza </h3>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-price  mbr-fonts-style align-right\" data-app-selector=\".mbr-price\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t$15 </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-desc mbr-fonts-style align-left\" data-app-selector=\".mbr-desc\" mbr-theme-style=\"display-7\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tMushroom/ Olive/ Rice </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div><div class=\"col-md-12 col-lg-6 pb-3 item-wrap\">\n\t\t\t\t\t\t\t\t<div class=\"row align-items-start\">\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"image-wrap\">\n\t\t\t\t\t\t\t\t\t\t\t<img alt src=\"../_images/img/delicious1.jpg\">\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row card-box\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h3 class=\"mbr-text mbr-fonts-style align-left\" data-app-selector=\".mbr-text\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tPotato Pizza </h3>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-price  mbr-fonts-style align-right\" data-app-selector=\".mbr-price\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t$15 </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-desc mbr-fonts-style align-left\" data-app-selector=\".mbr-desc\" mbr-theme-style=\"display-7\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tMushroom/ Olive/ Rice </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div><div class=\"col-md-12 col-lg-6 pb-3 item-wrap\">\n\t\t\t\t\t\t\t\t<div class=\"row align-items-start\">\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"image-wrap\">\n\t\t\t\t\t\t\t\t\t\t\t<img alt src=\"../_images/img/delicious1.jpg\">\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row card-box\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h3 class=\"mbr-text mbr-fonts-style align-left\" data-app-selector=\".mbr-text\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tPotato Pizza </h3>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-price  mbr-fonts-style align-right\" data-app-selector=\".mbr-price\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t$15 </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-desc mbr-fonts-style align-left\" data-app-selector=\".mbr-desc\" mbr-theme-style=\"display-7\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tMushroom/ Olive/ Rice </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div></div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div aria-labelledby=\"tech-tab8\" class=\"tab-pane\" id=\"tech-tab8-content\" role=\"tabpanel\">\n\t\t\t\t\t\t<div class=\"row\" mbr-list mbr-list-grow=\"items8\">\n\t\t\t\t\t\t\t<div class=\"col-md-12 col-lg-6 pb-3 item-wrap\">\n\t\t\t\t\t\t\t\t<div class=\"row align-items-start\">\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"image-wrap\">\n\t\t\t\t\t\t\t\t\t\t\t<img alt src=\"../_images/img/delicious1.jpg\">\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row card-box\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h3 class=\"mbr-text mbr-fonts-style align-left\" data-app-selector=\".mbr-text\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tPotato Pizza </h3>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-price  mbr-fonts-style align-right\" data-app-selector=\".mbr-price\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t$15 </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-desc mbr-fonts-style align-left\" data-app-selector=\".mbr-desc\" mbr-theme-style=\"display-7\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tMushroom/ Olive/ Rice </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"col-md-12 col-lg-6 pb-3 item-wrap\">\n\t\t\t\t\t\t\t\t<div class=\"row align-items-start\">\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"image-wrap\">\n\t\t\t\t\t\t\t\t\t\t\t<img alt src=\"../_images/img/delicious1.jpg\">\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row card-box\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h3 class=\"mbr-text mbr-fonts-style align-left\" data-app-selector=\".mbr-text\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tPotato Pizza </h3>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-price  mbr-fonts-style align-right\" data-app-selector=\".mbr-price\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t$15 </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-desc mbr-fonts-style align-left\" data-app-selector=\".mbr-desc\" mbr-theme-style=\"display-7\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tMushroom/ Olive/ Rice </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div><div class=\"col-md-12 col-lg-6 pb-3 item-wrap\">\n\t\t\t\t\t\t\t\t<div class=\"row align-items-start\">\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"image-wrap\">\n\t\t\t\t\t\t\t\t\t\t\t<img alt src=\"../_images/img/delicious1.jpg\">\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row card-box\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h3 class=\"mbr-text mbr-fonts-style align-left\" data-app-selector=\".mbr-text\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tPotato Pizza </h3>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-price  mbr-fonts-style align-right\" data-app-selector=\".mbr-price\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t$15 </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-desc mbr-fonts-style align-left\" data-app-selector=\".mbr-desc\" mbr-theme-style=\"display-7\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tMushroom/ Olive/ Rice </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div><div class=\"col-md-12 col-lg-6 pb-3 item-wrap\">\n\t\t\t\t\t\t\t\t<div class=\"row align-items-start\">\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"image-wrap\">\n\t\t\t\t\t\t\t\t\t\t\t<img alt src=\"../_images/img/delicious1.jpg\">\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t<div class=\"row card-box\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-8\">\n\t\t\t\t\t\t\t\t\t\t\t\t<h3 class=\"mbr-text mbr-fonts-style align-left\" data-app-selector=\".mbr-text\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tPotato Pizza </h3>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-4\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-price  mbr-fonts-style align-right\" data-app-selector=\".mbr-price\" mbr-theme-style=\"display-5\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t$15 </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"mbr-desc mbr-fonts-style align-left\" data-app-selector=\".mbr-desc\" mbr-theme-style=\"display-7\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tMushroom/ Olive/ Rice </p>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div></div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>",
+          "_cid": "vcVEb6P61a",
+          "_anchor": "tabs1-0",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_name": "image4",
+          "_customHTML": "<section class=\"image4 audiom4_image4\" group=\"Images\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-fullscreen': fullScreen, 'mbr-parallax-background': bg.parallax}\">\n\n\t<mbr-parameters>\n\t\t\n\t\t<header>Size</header>\n\t\t<input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n\t\t<input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"1\" condition=\"fullScreen == false\">\n\t\t<input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"1\" condition=\"fullScreen == false\">\n\t\t<header>Show / Hide</header>\n\t\t<input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n\t\t<input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n\t\t<input type=\"color\" name=\"overlay2\" title=\"Mobile Overlay Color\" value=\"#000000\" selected>\n\t\t<header>Background</header>\n\t\t<fieldset type=\"background\" name=\"bg\" parallax>\n\t\t\t<input type=\"image\" title=\"Image\" value=\"@ADDONS_PATH@/audiom4/components/_images/background1.jpg\" parallax>\n\t\t\t<input type=\"color\" title=\"Color\" value=\"#062440\" selected>\n\t\t\t<input type=\"video\" title=\"Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n\t\t</fieldset>\n        <header condition=\"bg.type === 'video'\">Fallback Image</header>\n        <input type=\"image\" title=\"Fallback Image\" value=\"@ADDONS_PATH@/audiom4/components/_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n\n\n\t\t<input type=\"checkbox\" title=\"Gradient\" name=\"gradientBg\" condition=\"bg.type == 'color'\">\n\t\t<input type=\"color\" title=\"Color 2\" name=\"color2\" value=\"#000000\" condition=\"gradientBg && bg.type == 'color'\">\n\n\t\t<input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n\t\t<input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#000000\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.4\" condition=\"overlay && bg.type !== 'color'\">\n\t\t\n\t</mbr-parameters>\n    <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n\n\n\t<div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\"></div>\n\n\t<div class=\"overlay\"></div>\n\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-12 col-lg-12 wrapper\">\n\t\t\t\t<img class=\"img1\" src=\"@PROJECT_PATH@/assets/images/sports-bar-frien-1200x672.jpg\" alt=\"Mobirise\">\n\t\t\t\t<img class=\"img2\" src=\"@PROJECT_PATH@/assets/images/team-picture-of-sports-bar-staff-proud-dad-daughter-team-1000x560.jpeg\" alt=\"Mobirise\">\n\t\t\t\t<img class=\"img3\" src=\"@PROJECT_PATH@/assets/images/sports-bar-frien-1000x560.jpg\" alt=\"Mobirise\">\n\n\t\t\t\t<div class=\"content\">\n\t\t\t\t\t<h2 class=\"mbr-section-title align-left mbr-bold mbr-white mbr-fonts-style\" mbr-if=\"showTitle\" mbr-theme-style=\"display-1\">\n\t\t\t\t\t\tAbout</h2>\n\n\t\t\t\t\t<p class=\"mbr-text align-left mbr-semibold mbr-white pb-3 mbr-fonts-style\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\" mbr-theme-style=\"display-7\">THE PENALTY BOX: YOUR OFFICIAL TIME-OUT.<br><br>We’re not your average sideline—we’re the high-octane sanctuary for the die-hards, the jersey-wearers, and the fans who know that a little friction makes the game better.<br><br>From our lineup of sport-specific cocktails to local craft beer,<br> we provide the fuel for the true fanatic.<br>\n\t\t\t\t\t</p>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>",
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 15px)",
+              "padding-bottom": "(@paddingBottom * 15px)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value",
+              "& when (@gradientBg)": {
+                "background": "linear-gradient(45deg, @bg-value, @color2)"
+              }
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".wrapper": {
+              "position": "relative",
+              "height": "700px",
+              "display": "flex"
+            },
+            "a": {
+              "text-decoration": "underline"
+            },
+            ".overlay": {
+              "position": "absolute",
+              "width": "100%",
+              "height": "100%",
+              "top": "0",
+              "left": "0",
+              "transition": "all 0.5s",
+              "background": "@overlay2",
+              "opacity": "0",
+              "z-index": "10",
+              "pointer-events": "none"
+            },
+            ".content": {
+              "z-index": "99",
+              "position": "relative",
+              "margin-bottom": "2rem",
+              "margin-top": "auto",
+              "max-width": "700px"
+            },
+            "img": {
+              "width": "600px",
+              "position": "absolute",
+              "border-radius": "100%",
+              "height": "600px",
+              "object-fit": "cover"
+            },
+            ".img2": {
+              "top": "2rem",
+              "left": "0",
+              "width": "500px",
+              "height": "500px",
+              "z-index": "3"
+            },
+            ".img1": {
+              "top": "50%",
+              "right": "50%",
+              "left": "50%",
+              "bottom": "50%",
+              "transform": "translate(-50%, -50%)",
+              "z-index": "2"
+            },
+            ".img3": {
+              "bottom": "2rem",
+              "right": "0",
+              "width": "500px",
+              "height": "500px",
+              "z-index": "1"
+            },
+            "@media (max-width: 992px)": {
+              ".img1, .img2, .img3": {
+                "width": "400px",
+                "height": "400px"
+              }
+            },
+            "@media (max-width: 767px)": {
+              ".img1, .img2, .img3": {
+                "width": "200px",
+                "height": "200px"
+              },
+              ".wrapper": {
+                "height": "400px"
+              },
+              ".overlay": {
+                "opacity": "0.5"
+              }
+            },
+            ".mbr-fallback-image.disabled": {
+              "display": "none"
+            },
+            ".mbr-fallback-image": {
+              "display": "block",
+              "background-size": "cover",
+              "background-position": "center center",
+              "width": "100%",
+              "height": "100%",
+              "position": "absolute",
+              "top": "0",
+              "& when (@bg-type = 'video')": {
+                "background-image": "url(@fallBackImage)"
+              }
+            }
+          },
+          "_cid": "vd1bLC1eag",
+          "_anchor": "image4-o",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_name": "footer6",
+          "_customHTML": "<section class=\"footer6\" group=\"Footers\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\" global once=\"footers\">\n\n    <mbr-parameters>\n        <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"map\" title=\"Map\" name=\"googleMap\">\n        <input type=\"checkbox\" title=\"Show Copyright\" name=\"showCopyright\" checked>\n        <select title=\"Icons\" name=\"iconsCount\">\n            <option value=\"0\">0</option>\n            <option value=\"1\">1</option>\n            <option value=\"2\">2</option>\n            <option value=\"3\">3</option>\n            <option value=\"4\" selected>4</option>\n            <option value=\"5\">5</option>\n            <option value=\"6\">6</option>\n        </select>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../../app/themes/mobirise5/components/_images/background5.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#062440\" selected>\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#232323\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.9\" condition=\"overlay && bg.type !== 'color'\">\n        <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n    <div class=\"container\">\n        <div class=\"row content mbr-white\">\n            <div class=\"col-12 col-md-3 mbr-fonts-style\" mbr-theme-style=\"display-7\">\n                <h5 class=\"mbr-section-subtitle mbr-fonts-style mb-2\" mbr-theme-style=\"display-7\">\n                    <b>Address</b>\n                </h5>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">\n                    1234 Street Name <br>\n                    City, AA 99999\n                </p> <br>\n                <h5 class=\"mbr-section-subtitle mbr-fonts-style mb-2 mt-4\" mbr-theme-style=\"display-7\">\n                    <b>Contacts</b>\n                </h5>\n                <p class=\"mbr-text mbr-fonts-style mb-4\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">\n                    Email: info@penaltyboxbar.com <br>\n                    Phone: +1 (757) 222 - 222<br></p>\n            </div>\n            <div class=\"col-12 col-md-3 mbr-fonts-style\" mbr-theme-style=\"display-7\">\n                <h5 class=\"mbr-section-subtitle mbr-fonts-style mb-2\" mbr-theme-style=\"display-7\">\n                    <b>Hours</b></h5>\n                <ul class=\"list mbr-fonts-style mb-4\" mbr-theme-style=\"display-7\" data-app-selector=\".list\" data-multiline mbr-article>\n                    <li class=\"mbr-text item-wrap\">Mon - Thurs: 12pm - 12am</li><li class=\"mbr-text item-wrap\">Fri, Sat, Sun: 12pm - 3am</li>\n                </ul>\n                <h5 class=\"mbr-section-subtitle mbr-fonts-style mb-2 mt-5\" mbr-theme-style=\"display-7\"></h5>\n                <p class=\"mbr-text mbr-fonts-style mb-4\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\"></p>\n            </div>\n            <div class=\"col-12 col-md-6\">\n                <div class=\"google-map\" mbr-map=\"googleMap\"></div>\n            </div>\n            <div class=\"col-md-6\">\n                <div class=\"social-list align-left\" mbr-if=\"iconsCount > 0\">\n                    <div class=\"soc-item\" mbr-if=\"iconsCount>0\">\n                        <a href=\"https://twitter.com/mobirise\" target=\"_blank\">\n                            <span mbr-icon class=\"socicon-twitter socicon mbr-iconfont mbr-iconfont-social\"></span>\n                        </a>\n                    </div>\n                    <div class=\"soc-item\" mbr-if=\"iconsCount>1\">\n                        <a href=\"https://www.facebook.com/pages/Mobirise/1616226671953247\" target=\"_blank\">\n                            <span mbr-icon class=\"socicon-facebook socicon mbr-iconfont mbr-iconfont-social\"></span>\n                        </a>\n                    </div>\n                    <div class=\"soc-item\" mbr-if=\"iconsCount>2\">\n                        <a href=\"https://www.youtube.com/c/mobirise\" target=\"_blank\">\n                            <span mbr-icon class=\"socicon-youtube socicon mbr-iconfont mbr-iconfont-social\"></span>\n                        </a>\n                    </div>\n                    <div class=\"soc-item\" mbr-if=\"iconsCount>3\">\n                        <a href=\"https://instagram.com/mobirise\" target=\"_blank\">\n                            <span mbr-icon class=\"socicon-instagram socicon mbr-iconfont mbr-iconfont-social\"></span>\n                        </a>\n                    </div>\n                    <div class=\"soc-item\" mbr-if=\"iconsCount>4\">\n                        <a href=\"https://plus.google.com/u/0/+Mobirise\" target=\"_blank\">\n                            <span mbr-icon class=\"socicon-googleplus socicon mbr-iconfont mbr-iconfont-social\"></span>\n                        </a>\n                    </div>\n                    <div class=\"soc-item\" mbr-if=\"iconsCount>5\">\n                        <a href=\"https://www.behance.net/Mobirise\" target=\"_blank\">\n                            <span mbr-icon class=\"socicon-behance socicon mbr-iconfont mbr-iconfont-social\"></span>\n                        </a>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <div class=\"footer-lower\" mbr-if=\"showCopyright\">\n            <div class=\"media-container-row\">\n                <div class=\"col-sm-12\">\n                    <hr>\n                </div>\n            </div>\n            <div class=\"col-sm-12 copyright pl-0\">\n                <p class=\"mbr-text mbr-fonts-style mbr-white\" mbr-theme-style=\"display-7\" data-app-selector=\".copyright > p\"></p>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = \"image\")": {
+              "background-image": "url(@bg-value)"
+            },
+            "& when (@bg-type = \"color\")": {
+              "background-color": "@bg-value"
+            },
+            ".content": {
+              "@media (max-width: 767px)": {
+                "text-align": "center",
+                "> div:not(:last-child)": {
+                  "margin-bottom": "2rem"
+                }
+              }
+            },
+            ".map": {
+              "height": "18.75rem"
+            },
+            ".footer-lower": {
+              ".copyright": {
+                "@media (max-width: 767px)": {
+                  "margin-bottom": "1rem",
+                  "text-align": "center"
+                }
+              },
+              "hr": {
+                "margin": "1rem 0",
+                "border-color": "#fff",
+                "opacity": "0.05"
+              }
+            },
+            ".google-map": {
+              "height": "25rem",
+              "position": "relative",
+              "iframe": {
+                "height": "100%",
+                "width": "100%"
+              },
+              "[data-state-details]": {
+                "color": "#6b6763",
+                "font-family": "Montserrat",
+                "height": "1.5em",
+                "margin-top": "-0.75em",
+                "padding-left": "1.25rem",
+                "padding-right": "1.25rem",
+                "position": "absolute",
+                "text-align": "center",
+                "top": "50%",
+                "width": "100%"
+              },
+              "&[data-state]": {
+                "background": "#e9e5dc"
+              },
+              "&[data-state=\"loading\"]": {
+                "[data-state-details]": {
+                  "display": "none"
+                },
+                "&::after": {}
+              }
+            },
+            ".social-list": {
+              "padding-left": "0",
+              "margin-bottom": "0",
+              "margin-left": "-7px",
+              "list-style": "none",
+              "display": "flex",
+              "-webkit-justify-content": "flex-start",
+              "justify-content": "flex-start",
+              "-webkit-flex-wrap": "wrap",
+              "flex-wrap": "wrap",
+              ".mbr-iconfont-social": {
+                "font-size": "1.3rem",
+                "color": "#fff"
+              },
+              ".soc-item": {
+                "margin": "0 0.5rem"
+              },
+              "a": {
+                "margin": "0",
+                "opacity": "0.5",
+                "-webkit-transition": "0.2s linear",
+                "transition": "0.2s linear",
+                "&:hover": {
+                  "opacity": "1"
+                }
+              },
+              "@media (max-width: 767px)": {
+                "-webkit-justify-content": "center",
+                "justify-content": "center"
+              }
+            },
+            ".list": {
+              "list-style-type": "none",
+              "padding": "0"
+            }
+          },
+          "_cid": "vd1983wYay",
+          "_anchor": "footer6-n",
+          "_protectedParams": [],
+          "_global": true,
+          "_once": "footers",
+          "_params": {}
+        }
+      ]
+    }
+  }
+}
